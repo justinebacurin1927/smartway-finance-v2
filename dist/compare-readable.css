@@ -1,0 +1,41 @@
+/* Keep the caption positioned inside the table's scroll container. */
+.inner-page[data-page="/compare"] .comparison-results{position:relative}
+/* Keep the same semantic comparison; increase legibility and reduce search distance. */
+.inner-page[data-page="/compare"]{--sheet:#f5f7f9;--sheet-ink:#142e40;--sheet-muted:#40576a;--sheet-line:#c2ced8;background:#f5f7f9}
+.inner-page[data-page="/compare"] .comparison-masthead{background:#f5f7f9;padding:55px 0 40px}
+.inner-page[data-page="/compare"] .comparison-masthead h1{font-family:Manrope,Arial,sans-serif;font-size:clamp(2.5rem,4.5vw,4.25rem);font-weight:800;letter-spacing:-.045em;line-height:1.12}
+.inner-page[data-page="/compare"] .comparison-masthead h1 em{font:inherit;color:#142e40}
+.inner-page[data-page="/compare"] .comparison-masthead .wrap>p:last-child{font-size:1.0625rem;color:#40576a;max-width:750px;line-height:1.8;margin-top:24px}
+.inner-page[data-page="/compare"] .inner-kicker{font-size:.875rem;color:#36546a;font-weight:700;letter-spacing:.07em;line-height:1.6}
+.inner-page[data-page="/compare"] .compare-inputs{grid-template-columns:.85fr 1.2fr .8fr .95fr;padding:28px 0;gap:30px;border-color:#b8c7d3}
+.inner-page[data-page="/compare"] .compare-inputs-heading>p{font-family:Manrope,Arial,sans-serif;font-size:1.125rem;font-weight:600;font-style:normal;color:#29475d;letter-spacing:-.02em;margin:12px 0 0}
+.inner-page[data-page="/compare"] .compare-inputs label{font-size:1rem;font-weight:700;letter-spacing:0;gap:12px;margin-bottom:12px;color:#193c53;flex-wrap:wrap}
+.inner-page[data-page="/compare"] .compare-inputs output{font-size:1.5rem;font-weight:800;color:#103f59;letter-spacing:-.025em}
+.inner-page[data-page="/compare"] .compare-inputs input[type=range]{min-height:44px;accent-color:#126f98}
+.inner-page[data-page="/compare"] .compare-purpose button{font-size:1rem;min-height:44px;padding:8px 12px;color:#36546a;border-radius:5px;font-weight:600}
+.inner-page[data-page="/compare"] .compare-purpose .filter-tabs{gap:4px;margin-top:12px}
+.inner-page[data-page="/compare"] .compare-purpose button[aria-pressed=true]{color:#fff;background:#133e58;text-decoration:none}
+.inner-page[data-page="/compare"] .compare-purpose button:before{display:none}
+.inner-page[data-page="/compare"] .compare-results-heading{margin:30px 0 22px;align-items:baseline}
+.inner-page[data-page="/compare"] #compare-status{font-size:1rem;color:#40576a;line-height:1.7}
+.inner-page[data-page="/compare"] .comparison-results{border:1px solid #c2ced8;border-radius:8px;background:#fff;overflow-x:auto;max-width:100%;scrollbar-width:auto;scrollbar-color:#476b83 #e7edf2}
+.inner-page[data-page="/compare"] .loan-ledger{font-size:1rem;background:#fff;table-layout:fixed}
+.inner-page[data-page="/compare"] .loan-ledger th,.inner-page[data-page="/compare"] .loan-ledger td{font-size:1rem;color:#19384c;padding:17px 24px;line-height:1.65;vertical-align:top;border-color:#cbd6df}
+.inner-page[data-page="/compare"] .loan-ledger th:first-child,.inner-page[data-page="/compare"] .loan-ledger td:first-child{font-size:1rem;font-weight:600;color:#2a475c;width:27%;padding-left:24px}
+.inner-page[data-page="/compare"] .loan-ledger td,.inner-page[data-page="/compare"] .loan-ledger thead th{width:36.5%}
+.inner-page[data-page="/compare"] .loan-ledger thead th,.inner-page[data-page="/compare"] .loan-ledger thead .ledger-corner{background:#e9f0f5;border-top:0;padding-top:22px;padding-bottom:24px}
+.inner-page[data-page="/compare"] .loan-ledger h2{font-size:1.625rem;font-weight:800;color:#142e40;line-height:1.25;letter-spacing:-.035em;max-width:none}
+.inner-page[data-page="/compare"] .ledger-index{font-size:.875rem;letter-spacing:.03em;font-weight:700;color:#405b70;margin-bottom:12px}
+.inner-page[data-page="/compare"] .loan-ledger tbody tr:nth-child(even){background:#f6f8fa}
+.inner-page[data-page="/compare"] .ledger-payment{font-size:clamp(2rem,3vw,2.875rem);font-weight:800;letter-spacing:-.04em;color:#103f59;line-height:1.2}
+.inner-page[data-page="/compare"] .ledger-unit{font-size:1rem;color:#40576a;margin-top:9px}
+.inner-page[data-page="/compare"] .loan-ledger .ledger-payment-row th,.inner-page[data-page="/compare"] .loan-ledger .ledger-payment-row td{padding-top:24px;padding-bottom:24px}
+.inner-page[data-page="/compare"] .loan-ledger ul{font-size:1rem;color:#27475b;line-height:1.75}
+.inner-page[data-page="/compare"] .loan-ledger li{margin-bottom:10px}
+.inner-page[data-page="/compare"] .ledger-enquire{font-size:1rem;font-weight:700;color:#075f87;line-height:1.7;padding-block:8px}
+.inner-page[data-page="/compare"] .compare-method{font-size:1rem!important;color:#29475d!important;line-height:1.85!important;margin-top:30px!important;max-width:1000px}
+.inner-page[data-page="/compare"] .comparison-workspace .calc-note{font-size:.9375rem!important;color:#40576a!important;line-height:1.9!important;max-width:1100px}
+.compare-scroll-hint{display:none}
+.inner-page[data-page="/compare"] :is(button,a,input,.comparison-results):focus-visible{outline:3px solid #0073a5;outline-offset:4px}
+@media(max-width:1100px){.inner-page[data-page="/compare"] .compare-inputs{grid-template-columns:1fr 1fr;gap:25px 36px}.inner-page[data-page="/compare"] .compare-inputs-heading{display:none}.inner-page[data-page="/compare"] .compare-purpose{grid-column:span 2}.inner-page[data-page="/compare"] .compare-purpose .filter-tabs{display:flex;max-width:330px}.inner-page[data-page="/compare"] .compare-purpose button{flex:1}}
+@media(max-width:700px){.inner-page[data-page="/compare"] .comparison-masthead{padding:40px 0 32px}.inner-page[data-page="/compare"] .comparison-masthead h1{font-size:2.5rem}.inner-page[data-page="/compare"] .compare-inputs{grid-template-columns:1fr;gap:24px}.inner-page[data-page="/compare"] .compare-purpose{grid-column:auto}.inner-page[data-page="/compare"] .compare-results-heading{display:block}.inner-page[data-page="/compare"] #compare-status{margin-top:10px}.inner-page[data-page="/compare"] .loan-ledger{min-width:660px}.inner-page[data-page="/compare"] .loan-ledger th,.inner-page[data-page="/compare"] .loan-ledger td{padding:17px 20px}.inner-page[data-page="/compare"] .loan-ledger th:first-child,.inner-page[data-page="/compare"] .loan-ledger td:first-child{padding-left:20px}.inner-page[data-page="/compare"] .loan-ledger h2{font-size:1.375rem}.inner-page[data-page="/compare"] .ledger-payment{font-size:2rem}.compare-scroll-hint{display:block!important;font-size:.9375rem!important;line-height:1.65!important;color:#36546a!important;margin:0 0 14px!important}.inner-page[data-page="/compare"] .comparison-results{scroll-margin-top:120px}.inner-page[data-page="/compare"] .compare-method{font-size:1rem!important}.inner-page[data-page="/compare"] .comparison-workspace .calc-note{font-size:.9375rem!important}}

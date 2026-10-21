@@ -1,0 +1,129 @@
+/* Five finance options: preserve the composition while making every choice readable. */
+.finance-word{color:#4c666b;padding-block:18px;min-height:64px}
+.finance-word-title{font-weight:500}
+.finance-word-number{font-size:12px;color:#48676c;letter-spacing:.5px}
+.finance-word.is-active{color:#0d3543}
+.finance-word.is-active .finance-word-title{text-decoration:underline;text-decoration-color:#008eac;text-decoration-thickness:2px;text-underline-offset:10px}
+.finance-editorial-heading>p{font-size:16px;line-height:1.8;color:#435f65;max-width:340px}
+.finance-selector-note{font-size:13px;color:#48676c;margin-top:24px}
+.finance-scene-copy{padding-top:20px;gap:28px;align-items:center}
+.finance-scene-copy h3{font-size:20px;margin-bottom:10px}
+.finance-scene-copy p{font-size:16px;color:#435f65;line-height:1.8;max-width:380px}
+.finance-explore{font-size:14px;max-width:145px;line-height:1.7;color:#164b5b;padding-block:10px}
+.finance-section-foot{font-size:13px;color:#48676c;line-height:1.8;gap:25px}
+.finance-orbit{fill:#426b68}
+.finance-orbit text{font-size:11px}
+@media(max-width:800px){
+ .finance-word{min-height:48px;padding:10px 0;color:#486269}
+ .finance-word-title{font-size:23px;line-height:1.4}
+ .finance-word-number{font-size:11px;min-width:18px}
+ .finance-choices{gap:6px 22px}
+ .finance-editorial-heading>p{font-size:16px;max-width:540px}
+ .finance-scene-copy{display:block;padding:18px 0 0}
+ .finance-scene-copy p{font-size:16px}
+ .finance-explore{display:inline-block;max-width:none;font-size:14px;margin-top:8px}
+ .finance-section-foot{font-size:12px;align-items:start}
+ .finance-section-foot span{max-width:none}
+}
+@media(max-width:520px){
+ .finance-choices{display:grid;grid-template-columns:1fr;gap:0;margin-top:10px}
+ .finance-word{width:100%;border-bottom:1px solid #becdc6;gap:15px;padding:13px 0}
+ .finance-word.is-active .finance-word-title{text-underline-offset:6px}
+ .finance-word-dot{display:block;margin-left:auto;margin-right:8px}
+ .finance-word-title{font-size:24px}
+ .finance-selector-note{display:block;margin:16px 0 0;font-size:13px}
+ .finance-scenes{margin-top:18px}
+}
+
+/* Reading defaults and explicit contrast for the shared light/dark surfaces. */
+.inner-page .source-page{color:#143443}
+.inner-page .content-section p,.inner-page .content-section li{font-size:16px;line-height:1.85}
+.inner-page .content-section p{color:#435e6c}
+.inner-page .content-section .label{font-size:12px;line-height:1.6;color:#346572}
+.inner-page .navy-section :is(h2,h3,h4,.strong-copy){color:#fff}
+.inner-page .navy-section :is(p,li){color:#d6e3e9}
+.inner-page .navy-section .label{color:#89def4}
+.inner-page .navy-section .surface{background:transparent;color:#fff;border-color:#ffffff40}
+.inner-page .navy-section a:not(.button){color:#99e7ff}
+.inner-page .page-masthead h1 span{color:#087695}
+.breadcrumbs{font-size:12px;color:#45636b}
+.reveal-target.is-pending{opacity:1;transform:none}
+a:focus-visible,summary:focus-visible,button:focus-visible{outline:3px solid #0784a8;outline-offset:5px}
+
+/* About: open sections, comfortable line lengths, and uncropped people. */
+.inner-page[data-page="/about"] .content-section{padding-block:88px}
+.inner-page[data-page="/about"] .content-section h2{font-size:clamp(32px,3.3vw,48px);line-height:1.15;font-weight:700;letter-spacing:-1.7px}
+.inner-page[data-page="/about"] .content-section h3{font-weight:700;font-size:25px;line-height:1.3;letter-spacing:-.6px}
+.inner-page[data-page="/about"] .content-section .label{font-weight:800;letter-spacing:1.4px;text-transform:uppercase}
+.inner-page[data-page="/about"] .about-intro{background:#edf2f3!important;padding-block:85px}
+.inner-page[data-page="/about"] .about-intro>.content-container{display:grid;grid-template-columns:minmax(0,1fr) 280px;gap:0 60px;align-items:start}
+.inner-page[data-page="/about"] .about-intro h1{grid-column:1;font-size:clamp(46px,5.7vw,80px);line-height:1.08;font-weight:700;letter-spacing:-3.5px;max-width:850px;margin:14px 0 25px}
+.inner-page[data-page="/about"] .about-intro>.content-container>p{grid-column:1;max-width:58ch;color:#435e6c;margin:0}
+.inner-page[data-page="/about"] .about-intro .surface{grid-column:2;grid-row:2 / span 2;align-self:center;background:transparent;border:0;border-left:1px solid #b9cbd3;border-radius:0;padding:12px 0 12px 28px;margin:0}
+.inner-page[data-page="/about"] .about-intro .surface p{margin:8px 0;font-size:14px;color:#284e60}
+.inner-page[data-page="/about"] .about-intro .surface .label{font-size:11px;color:#12647d}
+.inner-page[data-page="/about"] .about-mission .content-grid{align-items:center;gap:7%}
+.inner-page[data-page="/about"] .about-mission .surface{padding:0;border:0;background:none}
+.inner-page[data-page="/about"] .about-mission img{aspect-ratio:4/3;object-fit:cover;border-radius:0;max-height:none}
+.inner-page[data-page="/about"] .about-values{background:#edf2f3}
+.inner-page[data-page="/about"] .about-values .center{text-align:left;margin:0 0 45px;max-width:none;width:100%}
+.inner-page[data-page="/about"] .about-values .cols-4{gap:32px;counter-reset:value}
+.inner-page[data-page="/about"] .about-values .surface{counter-increment:value;border:0;border-top:1px solid #a9bfc9;padding:24px 0 0;background:none;border-radius:0}
+.inner-page[data-page="/about"] .about-values .surface:before{content:'0' counter(value);font-size:12px;font-weight:700;color:#23667c}
+.inner-page[data-page="/about"] .about-values h3{font-size:21px;margin-top:25px}
+.inner-page[data-page="/about"] .about-values .surface p{font-size:15px}
+.inner-page[data-page="/about"] .about-people>.content-container>.center{max-width:720px;margin:0 auto 48px}
+.inner-page[data-page="/about"] .about-people>.content-container>div:nth-child(2)>.content-grid{align-items:center;gap:6%;margin-bottom:70px}
+.inner-page[data-page="/about"] .about-people img{width:100%;height:auto;max-height:none;aspect-ratio:auto;object-fit:contain;border-radius:0}
+.inner-page[data-page="/about"] .about-people .surface{border:0;border-radius:0;background:none;padding:0}
+.inner-page[data-page="/about"] .about-people .badge:empty{display:none}
+.inner-page[data-page="/about"] .about-people>.content-container>.cols-2{gap:6%}
+.inner-page[data-page="/about"] .about-people>.content-container>.cols-2>.surface>div:last-child{padding:24px 0 0}
+.inner-page[data-page="/about"] .about-people>.content-container>.cols-2>.surface>div:last-child>div{font-size:12px;color:#346572;font-weight:700}
+.inner-page[data-page="/about"] .about-people>.content-container>.cols-2>.surface>div:last-child>p:first-of-type{font-size:13px;color:#346572}
+.inner-page[data-page="/about"] .about-credentials .content-grid{align-items:center;gap:48px}
+.inner-page[data-page="/about"] .about-credentials .content-grid .content-grid{gap:24px;margin-top:30px}
+.inner-page[data-page="/about"] .about-credentials .surface{border:0;border-top:1px solid #ffffff40;border-radius:0;padding:18px 0 0;background:none}
+.inner-page[data-page="/about"] .about-credentials .surface p{margin:0 0 8px;font-size:14px}
+.inner-page[data-page="/about"] .about-credentials .surface p:nth-child(2){font-size:24px;color:#fff;font-weight:700}
+.inner-page[data-page="/about"] .about-credentials img{border-radius:0}
+.inner-page[data-page="/about"] .about-invitation>.content-container{max-width:820px}
+
+/* The approved dark footer is shared, with type sized for actual reading. */
+#site-footer.brex-footer{font-size:14px;color:#bdcbd5}
+#site-footer.brex-footer .content-grid{grid-template-columns:1.2fr 1fr 1fr 1fr;gap:4%}
+#site-footer.brex-footer .content-grid>div:first-child>p{font-size:14px;color:#bdcbd5}
+#site-footer.brex-footer .content-grid>div>p:first-child{font-size:14px;color:#fff}
+#site-footer.brex-footer .content-grid>div:first-child>div>div,#site-footer.brex-footer a[aria-label]{font-size:12px;color:#bdcbd5}
+#site-footer.brex-footer .content-grid>div:last-child .label{font-size:11px!important;color:#b1c5d2}
+#site-footer.brex-footer>.content-container>div:last-child{font-size:12px;color:#b1c5d2;line-height:1.9}
+#site-footer.brex-footer a:focus-visible{outline-color:#89def4}
+#site-footer.brex-footer a:hover{color:#89def4;text-decoration:underline;text-underline-offset:4px}
+.brex-article-description{font-size:15px;color:#50616c}
+.brex-article-meta{font-size:12px;color:#50616c}
+.brex-article-category,.brex-article-link{font-size:12px}
+.brex-journal header>p:last-child{color:#50616c}
+#contact.brex-contact ul{font-size:12px;color:#bbceda}
+.brex-faq-list details>p{font-size:16px;color:#435e6c}
+.brex-faq-help p,.brex-faq-help a{font-size:13px}
+@media(max-width:1000px){
+ .inner-page[data-page="/about"] .about-intro>.content-container{grid-template-columns:minmax(0,1fr) 220px;gap:0 30px}
+ .inner-page[data-page="/about"] .about-values .cols-4{grid-template-columns:1fr 1fr}
+ #site-footer.brex-footer .content-grid{grid-template-columns:1fr 1fr;gap:40px}
+}
+@media(max-width:800px){
+ .inner-page[data-page="/about"] .content-section{padding-block:60px}
+ .inner-page[data-page="/about"] .about-intro>.content-container{display:block}
+ .inner-page[data-page="/about"] .about-intro h1{font-size:clamp(40px,8vw,64px);letter-spacing:-2px}
+ .inner-page[data-page="/about"] .about-intro .surface{border-left:0;border-top:1px solid #b9cbd3;padding:20px 0 0;margin-top:30px}
+ .inner-page[data-page="/about"] .about-mission .content-grid,.inner-page[data-page="/about"] .about-people>.content-container>div:nth-child(2)>.content-grid{gap:32px}
+ .inner-page[data-page="/about"] .about-people>.content-container>.cols-2{gap:48px}
+ .inner-page[data-page="/about"] .about-credentials .content-grid .content-grid{grid-template-columns:1fr 1fr;gap:24px}
+ #site-footer.brex-footer .content-grid{gap:35px 24px}
+}
+@media(max-width:520px){
+ .inner-page[data-page="/about"] .about-values .cols-4{grid-template-columns:1fr;gap:26px}
+ .inner-page[data-page="/about"] .about-values h3{margin-top:12px}
+ #site-footer.brex-footer .content-grid{grid-template-columns:1fr}
+ #site-footer.brex-footer .content-grid>div:first-child,#site-footer.brex-footer .content-grid>div:last-child{grid-column:auto}
+}

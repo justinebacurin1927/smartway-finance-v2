@@ -1,0 +1,33 @@
+/* People-led hero: keep the copy in the sky and the full group at the lower edge. */
+.hero{height:100svh;min-height:860px;max-height:1100px;background:#59abe6;color:#fff;overflow:hidden}
+.hero-video{inset:auto;left:0;bottom:0;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;object-position:center bottom;mask-image:linear-gradient(180deg,transparent,#000 120px);z-index:-3}
+.hero-shade{inset:0;width:100%;height:100%;z-index:-2;background:linear-gradient(180deg,#086aaf38,transparent 55%);pointer-events:none}
+.hero>.header{position:relative!important;top:auto;left:auto;right:auto;width:calc(100% - 112px);max-width:1440px;margin-inline:auto;padding:25px 0 0;background:transparent;backdrop-filter:none}
+.hero .brand img{filter:brightness(0) invert(1)!important}
+.hero .desktop-nav{background:transparent;border-color:transparent;backdrop-filter:none;gap:22px;padding:15px 0}
+.hero .desktop-nav>a,.hero .finance-menu summary,.hero .header-phone{color:#fff}
+.hero .desktop-nav>a:hover,.hero .finance-menu summary:hover{color:#e0f3ff}
+.hero>.header .button-small{background:#fff;color:#12334c;box-shadow:none}
+.hero-body{flex:none;flex-direction:column;width:100%;max-width:none;margin:0;padding:25px 24px 0;align-items:center;justify-content:flex-start;text-align:center;position:relative}
+.hero-copy{width:100%;max-width:1100px;margin:0 auto;padding:0;background:none;border-radius:0;display:flex;flex-direction:column;align-items:center}
+.hero-copy .eyebrow,.hero .categories,.hero .reassurance{display:none}
+.hero-copy h1{color:#fff;font-family:Manrope,Arial,sans-serif;font-weight:400;font-size:clamp(54px,4.8vw,80px);line-height:1.12;letter-spacing:-3.8px;max-width:100%;margin:0 0 23px;white-space:normal}
+.hero-copy h1>span{color:inherit}
+.hero-description{color:#fff;max-width:650px;font-size:16px;line-height:1.7}
+.hero-actions{margin-top:25px;justify-content:center}
+.hero-actions .button{background:#fff;color:#12334c;box-shadow:none;border-radius:40px;min-height:54px;font-size:14px;padding:15px 28px;font-weight:600;gap:18px}
+.hero-actions .button:hover,.hero>.header .button-small:hover{background:#e5f4ff}
+.hero-actions .button-outline{display:none}
+.hero-controls{display:flex;left:40px;right:40px;bottom:22px;justify-content:flex-end;z-index:2}
+.hero-controls .scroll-link{display:none}
+.hero .video-toggle{display:grid;background:#173b55a6;border-color:#ffffff9c;width:38px;height:38px}
+.hero-bottom{position:relative;left:auto;right:auto;bottom:auto;width:calc(100% - 112px);margin:0 auto;padding:32px 0;border:0;background:none;backdrop-filter:none;color:#102f43;z-index:auto}
+.hero-bottom .metrics strong,.hero-bottom .scene-caption{color:#102f43}
+.hero-bottom .metrics>div{border-color:#102f4326}
+.hero-bottom .metrics>div>span,.hero-bottom .scene-caption small{color:#315468}
+.hero .mobile-toggle{background:#ffffff20;border-color:#ffffff70}
+.hero .mobile-toggle span{background:#fff}
+@media(min-width:1700px){.hero-body{padding-top:25px}}
+@media(max-width:1250px){.hero .desktop-nav{gap:17px}.hero>.header{width:calc(100% - 64px)}}
+@media(max-width:1000px){.hero{min-height:780px}.hero>.header{width:calc(100% - 48px)}.hero-body{padding-top:65px}.hero-copy h1{font-size:clamp(48px,7vw,70px);letter-spacing:-2.8px}.hero-video{width:135%;left:-17.5%}.hero-bottom{width:calc(100% - 48px)}}
+@media(max-width:640px){.hero{height:100svh;min-height:700px;max-height:900px}.hero>.header{width:calc(100% - 40px);padding-top:20px}.hero-body{padding:60px 20px 0}.hero-copy h1{font-size:clamp(35px,8.6vw,54px);letter-spacing:-1.8px;line-height:1.16;margin:0 0 22px}.hero-description{font-size:14px;max-width:300px;line-height:1.8}.hero-actions{margin-top:24px}.hero-actions .button{font-size:13px;min-height:50px;padding:14px 25px}.hero-video{width:170%;left:-35%}.hero-controls{right:18px;bottom:18px}.hero-bottom{width:calc(100% - 40px);padding:26px 0}.hero-bottom .metrics{width:100%;justify-content:space-between}.hero-bottom .metrics>div{padding-right:16px;margin-right:0;min-width:0}.hero-bottom .metrics strong{font-size:26px}.hero-bottom .metrics>div>span{font-size:9px}}

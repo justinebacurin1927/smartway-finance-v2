@@ -1,0 +1,22 @@
+.intro-active { overflow: hidden; }
+.smartway-intro { position: fixed; inset: 0; z-index: 200; overflow: hidden; color: #eef6f8; }
+.intro-backdrop { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 48%, #0b2635e8 0%, #071c28 85%); opacity: .92; }
+.intro-logo { position: absolute; top: 50%; left: 50%; width: clamp(240px, 28vw, 340px); height: auto; aspect-ratio: 152 / 54; object-fit: contain; filter: brightness(0) invert(1) drop-shadow(0 16px 28px #0005); transform: translate(-50%, -50%); transform-origin: top left; will-change: transform; animation: intro-emerge .4s ease both; }
+.intro-skip { position: absolute; bottom: 28px; right: max(22px, 4vw); padding: 12px; border: 0; background: transparent; color: #b7cbd5; font: 10px Manrope, sans-serif; cursor: pointer; }
+.intro-skip span { margin-left: 10px; color: #00b7f4; }
+.intro-skip:focus-visible { outline: 2px solid #00b7f4; outline-offset: 4px; }
+.intro-active .header .brand { opacity: 0; }
+.intro-active .hero-video { filter: blur(7px); transform: scale(1.035); }
+.intro-revealing .hero-video { filter: blur(0); transform: scale(1); transition: filter 1s cubic-bezier(.22, 1, .36, 1), transform 1s cubic-bezier(.22, 1, .36, 1); }
+.intro-active .hero-copy > *, .intro-active .hero-bottom, .intro-active .hero-controls, .intro-active .header nav, .intro-active .header-actions { opacity: 0; }
+.intro-active .hero-copy > * { transform: translateY(18px); }
+.intro-active .hero-copy h1 { --intro-delay: .16s; }
+.intro-active .hero-description { --intro-delay: .24s; }
+.intro-active .categories { --intro-delay: .30s; }
+.intro-active .hero-actions { --intro-delay: .36s; }
+.intro-active .reassurance { --intro-delay: .42s; }
+.intro-revealing .hero-copy > * { opacity: 1; transform: translateY(0); transition: opacity .5s ease var(--intro-delay, .1s), transform .6s cubic-bezier(.22, 1, .36, 1) var(--intro-delay, .1s); }
+.intro-revealing .hero-bottom, .intro-revealing .hero-controls { opacity: 1; transition: opacity .5s ease .45s; }
+.intro-revealing .header nav, .intro-revealing .header-actions { opacity: 1; transition: opacity .6s ease .25s; }
+@keyframes intro-emerge { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .smartway-intro { display: none; } .intro-active { overflow: visible; } }

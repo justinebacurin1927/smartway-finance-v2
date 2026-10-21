@@ -1,0 +1,84 @@
+{
+  "startedAt": "2026-10-18T12:26:06Z",
+  "reviewedAt": "2026-10-18T12:31:00Z",
+  "references": [
+    {
+      "name": "unifin",
+      "url": "https://dribbble.com/shots/25602377-UniFin-Fintech-Template-for-webflow-About-US-Page",
+      "image": "https://cdn.dribbble.com/userupload/23680014/file/original-52536772038150b88d458e3ad0021133.jpg",
+      "path": "/tmp/smartway-ref-unifin.jpg",
+      "review": "Reviewed large left-aligned headline above broad photograph; rejected as too close to another hero for a mid-page About.",
+      "counted": true
+    },
+    {
+      "name": "gauchere",
+      "url": "https://dribbble.com/shots/25039198-Gauchere-Aesthetic-Bold-Luxury-Fashion-Website-About-Us-Page",
+      "image": "https://cdn.dribbble.com/userupload/17113309/file/original-ffdb2fe1abbf18344bfc23e8e7021458.jpeg",
+      "path": "/tmp/smartway-ref-gauchere.jpeg",
+      "review": "Reviewed oversized condensed typography and staggered images; rejected because it relies on fashion imagery and typography outside Smartway tone.",
+      "counted": true
+    },
+    {
+      "name": "advisor",
+      "url": "https://dribbble.com/shots/26466364-Personal-Branding-Website-for-CPA-Financial-Advisor",
+      "image": "https://cdn.dribbble.com/userupload/44717701/file/1adc84fc4829f8948c5aebaed8440ea5.png",
+      "path": "/tmp/smartway-ref-advisor.png",
+      "review": "Reviewed personal finance adviser hero; rejected portrait-on-right split as too close to the existing section structure.",
+      "counted": true
+    },
+    {
+      "name": "zenith",
+      "url": "https://dribbble.com/shots/25771094-Zenith-Cloud-Responsive-About-Page-Design",
+      "image": "https://cdn.dribbble.com/userupload/42202753/file/original-18bf1900a722f6040629279c65172ebd.png",
+      "path": "/tmp/smartway-ref-zenith.png",
+      "review": "Reviewed mobile story / team / values sequence; useful responsive precedent, but not selected for composition.",
+      "counted": true
+    },
+    {
+      "name": "untitled",
+      "url": "https://dribbble.com/shots/25137453-Meet-the-team-Untitled-UI",
+      "image": "https://cdn.dribbble.com/userupload/17411468/file/original-1deff62cddcfa01b020da6dae9614c2f.jpg",
+      "path": "/tmp/smartway-ref-untitled.jpg",
+      "review": "Reviewed generous header with horizontal portrait sequence; rejected because Smartway has one original team composite, not a gallery of named staff.",
+      "counted": true
+    },
+    {
+      "name": "apriority",
+      "url": "https://dribbble.com/shots/25230497--38-Apriority-About-Summary",
+      "image": "https://cdn.dribbble.com/userupload/22189861/file/original-f7ee7fdb7eb55d0fdb1770d677e23c8a.png",
+      "path": "/tmp/smartway-ref-apriority.png",
+      "review": "Search result could not resolve to requested work; generic fallback page. Not counted as reviewed relevant reference.",
+      "counted": false
+    },
+    {
+      "name": "texpion",
+      "url": "https://dribbble.com/shots/26853263-Texpion-Tax-CPA-Bookkeeping-Agency-Website",
+      "image": "https://cdn.dribbble.com/userupload/45963703/file/c369c77d373ae76884792550c90dbe40.png",
+      "path": "/tmp/smartway-ref-texpion.png",
+      "review": "Selected primary. White About module has a 35/65 offset headline then copy left and large image right, separated by hairlines.",
+      "counted": true
+    },
+    {
+      "name": "finser",
+      "url": "https://dribbble.com/shots/25573714-Finser-Finance-Landing-Page",
+      "image": "https://cdn.dribbble.com/userupload/20656194/file/original-0fb2b5eaff1134ddd3b3942532e5ffc4.jpg",
+      "path": "/tmp/smartway-ref-finser.jpg",
+      "review": "Reviewed pastel feature-card composition; rejected gradients and app-oriented card grid.",
+      "counted": true
+    },
+    {
+      "name": "fundex",
+      "url": "https://dribbble.com/shots/25225833-Finance-Website",
+      "image": "https://cdn.dribbble.com/userupload/18821679/file/original-495048f8cae0d994f4bd6779205f7bcf.png",
+      "path": "/tmp/smartway-ref-fundex.png",
+      "review": "Reviewed payment app showcase; rejected because phone UI and product data are not Smartway assets.",
+      "counted": true
+    },
+    {
+      "name": "texpion-live-home-v1",
+      "url": "https://texpion.webflow.io/home-pages/home-v1",
+      "review": "Opened live page and visually inspected revealed section.about-us at full size. Confirmed headline/copy/image proportions and hairline divisions. Primary live composition source.",
+      "counted": true
+    }
+  ]
+}

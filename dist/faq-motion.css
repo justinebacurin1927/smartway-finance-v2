@@ -1,0 +1,41 @@
+.inner-page[data-page="/faqs"] .page-masthead{padding:74px 0 56px;text-align:left}
+.inner-page[data-page="/faqs"] .page-masthead .content-container{text-align:left;margin-left:6%;margin-right:6%}
+.inner-page[data-page="/faqs"] .page-masthead p{margin-left:0}
+.inner-page[data-page="/faqs"] .source-page>.content-section:nth-child(2){padding:54px 0;background:#f4f7f5}
+.inner-page[data-page="/faqs"] .source-page>.content-section:nth-child(2)>.content-container{max-width:1328px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 72px}
+.inner-page[data-page="/faqs"] .source-page>.content-section:nth-child(2)>.content-container>div{display:block;padding:32px 0;border-top:1px solid #cbd9d6;animation:faq-category-in .7s cubic-bezier(.22,1,.36,1) both}
+.inner-page[data-page="/faqs"] .source-page>.content-section:nth-child(2)>.content-container>div:nth-child(2){animation-delay:.08s}.inner-page[data-page="/faqs"] .source-page>.content-section:nth-child(2)>.content-container>div:nth-child(3){animation-delay:.16s}.inner-page[data-page="/faqs"] .source-page>.content-section:nth-child(2)>.content-container>div:nth-child(4){animation-delay:.24s}.inner-page[data-page="/faqs"] .source-page>.content-section:nth-child(2)>.content-container>div:nth-child(5){animation-delay:.32s}
+@keyframes faq-category-in{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.inner-page[data-page="/faqs"] .source-page h2{margin:0 0 16px;font-size:18px;letter-spacing:-.2px;color:#1683a5}
+.inner-page[data-page="/faqs"] .surface{padding:0;border:0;background:transparent}
+.inner-page[data-page="/faqs"] .faq-item{padding:14px 0;border-bottom:1px solid #d5e0de}
+.inner-page[data-page="/faqs"] .faq-item summary{font-size:14px;line-height:1.35;font-weight:600}
+.inner-page[data-page="/faqs"] .faq-item summary span{font-size:18px;transition:transform .35s ease}
+.inner-page[data-page="/faqs"] .faq-item[open] summary{color:#0c86a8}
+.inner-page[data-page="/faqs"] .faq-item p{font-size:13px;line-height:1.65;margin:12px 30px 4px 0;animation:faq-answer-in .4s ease both}
+@keyframes faq-answer-in{from{opacity:0;transform:translateY(-6px)}to{opacity:1;transform:none}}
+@media(max-width:760px){.inner-page[data-page="/faqs"] .source-page>.content-section:nth-child(2)>.content-container{display:block}.inner-page[data-page="/faqs"] .page-masthead{padding:56px 0 42px}.inner-page[data-page="/faqs"] .page-masthead .content-container{margin:0 22px}}
+@media(prefers-reduced-motion:reduce){.inner-page[data-page="/faqs"] .source-page>.content-section:nth-child(2)>.content-container>div,.inner-page[data-page="/faqs"] .faq-item p{animation:none}}
+/* Final readability pass for the FAQ route. */
+.inner-page[data-page="/faqs"] .source-page>.content-section:nth-child(2)>.content-container{max-width:1180px!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:0 64px!important}
+.inner-page[data-page="/faqs"] .source-page>.content-section:nth-child(2)>.content-container>div{display:block!important;padding:30px 0!important;border-top:1px solid #b8cccf!important}
+.inner-page[data-page="/faqs"] .surface{border:0!important;border-radius:0!important;background:transparent!important;padding:0!important}
+.inner-page[data-page="/faqs"] .faq-item{padding:18px 0!important;border-bottom:1px solid #c6d7da!important}
+.inner-page[data-page="/faqs"] .faq-item summary{font-size:17px!important;line-height:1.45!important;color:#123c4d!important}
+.inner-page[data-page="/faqs"] .faq-item summary span{font-size:20px!important;color:#087f9f!important}
+.inner-page[data-page="/faqs"] .faq-item p{font-size:15px!important;line-height:1.75!important;color:#456b78!important;max-width:62ch!important}
+.inner-page[data-page="/faqs"] .source-page h2{font-size:20px!important;letter-spacing:.01em!important}
+@media(max-width:760px){.inner-page[data-page="/faqs"] .source-page>.content-section:nth-child(2)>.content-container{display:block!important}.inner-page[data-page="/faqs"] .faq-item summary{font-size:16px!important}}
+/* Balance the FAQ hero and keep the first viewport information-rich. */
+.inner-page[data-page="/faqs"] .page-masthead{padding:78px 0 70px!important;background:#e7eeea!important;color:#0b2635!important}
+.inner-page[data-page="/faqs"] .page-masthead .content-container{display:grid!important;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr)!important;align-items:end!important;gap:64px!important;max-width:1180px!important;margin:0 auto!important;text-align:left!important}
+.inner-page[data-page="/faqs"] .page-masthead .content-container h1{font-size:clamp(52px,6vw,86px)!important;line-height:.98!important;letter-spacing:-4px!important;margin:12px 0 0!important;max-width:760px!important}
+.inner-page[data-page="/faqs"] .page-masthead .content-container>p:last-child{margin:0 0 5px!important;max-width:300px!important;color:#456b78!important;font-size:15px!important;line-height:1.7!important}
+.inner-page[data-page="/faqs"] .page-masthead .label{color:#1683a5!important;margin:0!important}
+.inner-page[data-page="/faqs"] .source-page>.content-section:nth-child(2)>.content-container{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;align-items:start!important}
+.inner-page[data-page="/faqs"] .source-page>.content-section:nth-child(2)>.content-container>div{width:auto!important}
+@media(max-width:760px){.inner-page[data-page="/faqs"] .page-masthead .content-container{display:block!important;margin:0 22px!important}.inner-page[data-page="/faqs"] .page-masthead .content-container h1{font-size:52px!important;letter-spacing:-2.5px!important}.inner-page[data-page="/faqs"] .page-masthead .content-container>p:last-child{margin-top:28px!important}.inner-page[data-page="/faqs"] .source-page>.content-section:nth-child(2)>.content-container{display:block!important}}
+.faq-category-nav{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:8px;margin:0 0 34px;padding-bottom:20px;border-bottom:1px solid #b8cccf}
+.faq-category-nav a{display:inline-flex;padding:9px 13px;border:1px solid #a9c2c7;border-radius:999px;color:#123c4d;font-size:12px;font-weight:600;text-decoration:none;transition:background .25s ease,color .25s ease,border-color .25s ease}
+.faq-category-nav a:hover,.faq-category-nav a:focus-visible{background:#123c4d;border-color:#123c4d;color:#fff}
+@media(max-width:760px){.faq-category-nav{grid-column:auto;display:grid;grid-template-columns:1fr 1fr;margin-bottom:18px}.faq-category-nav a{font-size:11px}}

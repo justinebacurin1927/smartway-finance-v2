@@ -1,0 +1,52 @@
+{
+  "reviewedAt": "2026-10-18T11:42:43.422147+00:00",
+  "primary": "https://dribbble.com/shots/27489413-Luxury-Real-Estate-Insights-CMS-Editorial-Blog-Experience",
+  "review": "Nine distinct pages opened via web or agent-reach Jina; nine full preview images visually inspected. Exploration exceeded three minutes. Gallery artwork not shipped.",
+  "references": [
+    {
+      "url": "https://dribbble.com/shots/4002969-T-J-Editorial-Blog-Article-Inner-Page-Concept",
+      "previewInspected": "/tmp/sw-journal-refs/1.png",
+      "decision": "Inner article layout; too little index hierarchy for homepage teaser."
+    },
+    {
+      "url": "https://dribbble.com/shots/27099376-Running-Apparel-Website-Editorial-Blog-Commerce-Experience",
+      "previewInspected": "/tmp/sw-journal-refs/2.png",
+      "decision": "Athletic typography and image overlays do not fit Smartway tone."
+    },
+    {
+      "url": "https://dribbble.com/shots/4035240-T-J-Editorial-Blog-Article-Preview-Page",
+      "previewInspected": "/tmp/sw-journal-refs/3.png",
+      "decision": "Single preview screen, limited multi-story layout."
+    },
+    {
+      "url": "https://dribbble.com/shots/27489413-Luxury-Real-Estate-Insights-CMS-Editorial-Blog-Experience",
+      "previewInspected": "/tmp/sw-journal-refs/4.png",
+      "decision": "Primary: large lead image beside readable text; clear separation from following stories; paper palette."
+    },
+    {
+      "url": "https://dribbble.com/shots/27488998-Editorial-Blog-Layout",
+      "previewInspected": "/tmp/sw-journal-refs/5.png",
+      "decision": "Dense article body, not a homepage index."
+    },
+    {
+      "url": "https://dribbble.com/shots/3997307-T-J-Editorial-Blog-Home-Page-Concept",
+      "previewInspected": "/tmp/sw-journal-refs/6.png",
+      "decision": "Interesting image geometry, but narrower columns than this section needs."
+    },
+    {
+      "url": "https://dribbble.com/shots/27062939-Editorial-Blog-Layout",
+      "previewInspected": "/tmp/sw-journal-refs/7.png",
+      "decision": "Useful whitespace but asymmetric tiles would add unwanted card treatment."
+    },
+    {
+      "url": "https://dribbble.com/shots/25835947-Modern-Editorial-Blog-Page-Office-Spaces-at-Studio-Urbane",
+      "previewInspected": "/tmp/sw-journal-refs/8.png",
+      "decision": "Broad image but overlay text would obscure source photography."
+    },
+    {
+      "url": "https://dribbble.com/shots/17411718-Editorial-blog-post-Untitled-UI",
+      "previewInspected": "/tmp/sw-journal-refs/9.png",
+      "decision": "Calm reading rhythm, but article-focused rather than index layout."
+    }
+  ]
+}

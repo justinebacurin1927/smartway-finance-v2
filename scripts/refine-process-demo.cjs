@@ -1,0 +1,14 @@
+const fs=require('fs'),path=require('path');
+const root=path.resolve(__dirname,'..'),file=path.join(root,'dist/index.html');
+const {pages}=JSON.parse(fs.readFileSync(path.join(root,'references/source-site/content.json')));
+const text=n=>typeof n==='string'?n:n.children.map(text).join('');
+const nodes=(n,t)=>typeof n==='string'?[]:[...(n.tag===t?[n]:[]),...n.children.flatMap(c=>nodes(c,t))];
+const esc=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
+const source=nodes(pages['/'].main,'section').find(s=>text(s).includes('Three Steps to Your Loan'));
+const headings=nodes(source,'h3').map(text),copy=nodes(source,'p').map(text).filter(p=>p.length>65);
+const {film}=require('./motion-scenes.cjs');
+const markup=`<section id="process" class="process-cinema" aria-labelledby="process-title"><div class="wrap"><header class="process-cinema-heading"><div><p class="process-kicker">How it works</p><h2 id="process-title">It starts with a conversation.<br>We take it from there.</h2></div><p>Three steps. One team beside you.<br>Watch your journey unfold.</p></header>${film('process',['enquiry','comparison','settlement'])}<ol class="process-chapters">${headings.map((h,i)=>`<li><div class="process-chapter" data-film-chapter="${i}" data-active="${i===0}"><span>${['Enquire','Compare','Settle'][i]}</span><strong>${esc(h)}</strong></div><p>${esc(copy[i])}</p></li>`).join('')}</ol><div class="process-cinema-bottom"><p>Illustrative conversation. Finance remains subject to lender assessment and approval.</p><a href="/contact/">Start your own conversation <span aria-hidden="true">↗</span></a></div></div></section>`;
+let html=fs.readFileSync(file,'utf8').replace(/<section id="process"[\s\S]*?<\/section>/,markup);
+html=html.replace(/<link rel="stylesheet" href="\/(?:process-demo|motion-film).css[^\"]*">/g,'').replace(/<script src="\/(?:process-demo|motion-film).js[^\"]*" defer><\/script>/g,'');
+html=html.replace('</head>','<link rel="stylesheet" href="/process-demo.css?v=20261018-ambient-4"><link rel="stylesheet" href="/motion-film.css?v=20261018-ambient-4"><script src="/motion-film.js?v=20261018-ambient-4" defer></script></head>');
+fs.writeFileSync(file,html);console.log('Applied four benefit films and a three-chapter process film.');

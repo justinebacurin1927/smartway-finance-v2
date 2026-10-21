@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-17",
+  "primary": "Existing Smartway Finance logo and header: dist/assets/smartway-logo.png, dist/index.html",
+  "direction": "Approved logo-to-header motion, enhanced with real coastal footage behind a translucent navy vignette, a depth shadow that settles away, a slight zoom/focus pull, and staggered hero text. Replays on every refresh.",
+  "fidelityMap": {
+    "silhouette": "Existing client logo only, centered against the same navy used in the hero.",
+    "geometry": "Measure the header logo rectangle at runtime; translate and scale the intro logo to that exact rectangle.",
+    "type": "No extra headline or decorative typography.",
+    "palette": "Same white logo treatment as the header, Smartway navy and the existing hero video.",
+    "motion": "650 ms centered logo; 1000 ms measured logo-to-header handoff synchronized with the coastal focus pull and staggered content. Original implementation, with no extra assets or runtime dependencies.",
+    "assets": "Only the existing client logo; no new invented icon or gallery artwork."
+  },
+  "reviewed": [
+    {
+      "url": "https://dribbble.com/shots/4007128-Carrum-logo-loader",
+      "note": "Explored circular automotive branding; this dial direction was rejected by the user and is not in the final implementation."
+    },
+    {
+      "url": "https://dribbble.com/shots/4418571-Connected-car-loader",
+      "note": "Reviewed still; rejected asset-heavy 3D car/phone presentation."
+    },
+    {
+      "url": "https://dribbble.com/shots/4339853-Car-Loader",
+      "note": "Reviewed still; compact front-facing car, more playful than the site."
+    },
+    {
+      "url": "https://dribbble.com/shots/2069356-Car-Loader-animation",
+      "note": "Reviewed still; outlined vehicle on dark field, useful palette comparison."
+    },
+    {
+      "url": "https://dribbble.com/shots/16581303-Car-Page-Loader-Micro-interaction-06",
+      "note": "Reviewed still; detailed car and traffic light would require unrelated illustration."
+    },
+    {
+      "url": "https://dribbble.com/shots/2692406-SVG-Car-Drift-Loader",
+      "note": "Reviewed still; circular vehicle motif, racing/smoke tone unsuitable for a broker."
+    },
+    {
+      "url": "https://dribbble.com/shots/3739184-Car-Dealer-GIF-Loader",
+      "note": "Reviewed still; illustrated holiday car feels too cartoon-like."
+    },
+    {
+      "url": "https://dribbble.com/shots/3781908-Car-Dealer-GIF-Loader",
+      "note": "Reviewed still; generic racing vehicle/road motif."
+    },
+    {
+      "url": "https://dribbble.com/shots/2928490-Wheel-Minimal-Page-Loader",
+      "note": "Reviewed still; compact automotive silhouette but not specific to Smartway."
+    }
+  ],
+  "additionalVisualReview": "Concept Loader by Rahul Sharma: tyre on red background; gallery media reviewed but its individual shot page failed to open.",
+  "localReferences": [
+    {
+      "path": "/home/nami/Desktop/projects/Apps/dcsr-website/src/App.jsx",
+      "note": "Fan and radial-hole exit; keep Smartway distinct."
+    },
+    {
+      "path": "/home/nami/Desktop/projects/Apps/huntly/src/IntroLoader.jsx",
+      "note": "Wordmark, route line and upward wave exit."
+    },
+    {
+      "path": "/home/nami/Desktop/projects/Apps/arko-landing-page/app/_components/Preloader.tsx",
+      "note": "Video readiness and tap-to-enter; user wants automatic exit on refresh."
+    },
+    {
+      "path": "/home/nami/Desktop/projects/Apps/dm-arc-construction/src/components/SiteLoader.tsx",
+      "note": "Architectural illustration and split exit; Smartway adapts diagonal departure without its house/grid/progress display."
+    },
+    {
+      "path": "/home/nami/Desktop/projects/Apps/fresh-phones-ph/apps/web/components/LandingLoader.tsx",
+      "note": "Cloud-based identity treatment."
+    },
+    {
+      "path": "/home/nami/Desktop/projects/Apps/cloudpg-redesign/src/modern.css",
+      "note": "Light framed logo loader; desktop preview also visually inspected."
+    }
+  ],
+  "researchLimits": "Exa timed out; web search and direct CDN downloads supplied the references. Full Dribbble browser page returned a blank 202. Reviewed downloaded gallery stills at their available full size; live reference motion was not verified."
+}
