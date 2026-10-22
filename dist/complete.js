@@ -4,8 +4,9 @@
   if(document.body.classList.contains('inner-page')){
     const close=()=>{menu.hidden=true;menuButton.setAttribute('aria-expanded','false');menuButton.setAttribute('aria-label','Open navigation');};
     menuButton.addEventListener('click',()=>{menu.hidden=!menu.hidden;menuButton.setAttribute('aria-expanded',String(!menu.hidden));menuButton.setAttribute('aria-label',menu.hidden?'Open navigation':'Close navigation');});
-    document.addEventListener('keydown',e=>{if(e.key==='Escape'){close();document.querySelector('.finance-menu').open=false;menuButton.focus();}});
-    document.addEventListener('click',e=>{if(!e.target.closest('.header'))close();if(!e.target.closest('.finance-menu'))document.querySelector('.finance-menu').open=false;});
+    menu.addEventListener('click',e=>{if(e.target.closest('a'))close();});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!menu.hidden){close();menuButton.focus();}});
+    document.addEventListener('click',e=>{if(!e.target.closest('.header'))close();});
   }
   const route=document.body.dataset.page;
   const main=document.querySelector('.source-page');
@@ -40,8 +41,10 @@
   if(route==='/calculator'){
     const section=main.querySelectorAll('section')[1];
     const disclaimer=[...section.querySelectorAll('p')].find(p=>p.textContent.includes('Disclaimer:'))?.textContent||'';
-    section.innerHTML=`<div class="content-container"><div class="calc-layout"><div><p class="label">Adjust Your Loan</p><div class="calc-controls">${field('amount','Loan Amount',25000,3000,200000,500,money)}${field('term','Loan Term',5,1,7,1,n=>n+' years')}${field('rate','Interest Rate (p.a.)',7.99,4,20,.01,n=>Number(n).toFixed(2)+'%')}${field('balloon','Balloon / Residual',0,0,10000,500,money)}</div><p>Interest Rate from <b>5.95% p.a.</b><br>Comparison Rate from <b>5.95% p.a.*</b></p></div><div class="estimate" aria-live="polite" aria-atomic="true"><p class="label">Your Estimate</p><p>Estimated Monthly Repayment</p><strong id="monthly"></strong><p id="period"></p><dl id="breakdown"></dl><a class="button" href="/apply/">Get a Real Quote — It's Free ↗</a><p>No obligation. Response within 1 business day.</p></div></div><p class="calc-note">${disclaimer}</p></div>`;
+    if (!section.hasAttribute('data-calculator-workspace')) section.innerHTML=`<div class="content-container"><div class="calc-layout"><div><p class="label">Adjust Your Loan</p><div class="calc-controls">${field('amount','Loan Amount',25000,3000,200000,500,money)}${field('term','Loan Term',5,1,7,1,n=>n+' years')}${field('rate','Interest Rate (p.a.)',7.99,4,20,.01,n=>Number(n).toFixed(2)+'%')}${field('balloon','Balloon / Residual',0,0,10000,500,money)}</div><p>Interest Rate from <b>5.95% p.a.</b><br>Comparison Rate from <b>5.95% p.a.*</b></p></div><div class="estimate" aria-live="polite" aria-atomic="true"><p class="label">Your Estimate</p><p>Estimated Monthly Repayment</p><strong id="monthly"></strong><p id="period"></p><dl id="breakdown"></dl><a class="button" href="/apply/">Get a Real Quote — It's Free ↗</a><p>No obligation. Response within 1 business day.</p></div></div><p class="calc-note">${disclaimer}</p></div>`;
+    section.querySelectorAll('input[type=range]').forEach(input=>{input.disabled=false;});
     function update(){const a=+document.querySelector('#amount').value,t=+document.querySelector('#term').value,r=+document.querySelector('#rate').value,b=+document.querySelector('#balloon').value,m=payment(a,r,t,b),total=m*t*12+b;
+      section.querySelectorAll('input[type=range]').forEach(input=>input.style.setProperty('--calculator-progress',100*(input.value-input.min)/(input.max-input.min)+'%'));
       document.querySelector('#amount-value').textContent=money(a);document.querySelector('#term-value').textContent=t+' years';document.querySelector('#rate-value').textContent=r.toFixed(2)+'%';document.querySelector('#balloon-value').textContent=money(b);
       document.querySelector('#monthly').textContent=money(m,2);document.querySelector('#period').textContent=`per month for ${t} years`;
       document.querySelector('#breakdown').innerHTML=[['Loan Amount',money(a)],['Interest Rate',r.toFixed(2)+'% p.a.'],['Loan Term',`${t} years (${t*12} payments)`],['Balloon / Residual',money(b)],['Total Repayable',money(total,2)],['Total Interest',money(total-a,2)]].map(([k,v])=>`<div><dt>${k}</dt><dd>${v}</dd></div>`).join('');
@@ -84,7 +87,7 @@
     for(const type of ['personal','business'])document.querySelector('#'+type+'-purpose').addEventListener('click',()=>{if(purpose===type)return;purpose=type;for(const v of ['personal','business'])document.querySelector('#'+v+'-purpose').setAttribute('aria-pressed',String(v===type));update();});
     section.addEventListener('input',update);update();
   }
-  if(route==='/apply'){
+  if(route==='/apply' && !main.hasAttribute('data-application-flow')){
     const buttons=[...main.querySelectorAll('.page-masthead button')],frames=[...main.querySelectorAll('iframe')];
     frames.forEach((frame,i)=>{frame.hidden=i!==0;frame.title=i===0?'Personal and vehicle finance application':'Business finance application';if(i===1){frame.dataset.src=frame.src;frame.removeAttribute('src');}});
     buttons.forEach((b,i)=>{b.setAttribute('aria-pressed',String(i===0));b.addEventListener('click',()=>{buttons.forEach((other,j)=>other.setAttribute('aria-pressed',String(i===j)));frames.forEach((frame,j)=>{frame.hidden=i!==j;if(i===j&&!frame.getAttribute('src'))frame.src=frame.dataset.src;});});});
@@ -104,14 +107,14 @@
       if(!reducedMotion.matches)articles.filter(a=>!a.hidden).forEach((article,index)=>{
         article.getAnimations().forEach(a=>a.cancel());
         const old=before.get(article),next=article.getBoundingClientRect();
-        if(old)article.animate([{transform:`translateY(${old.top-next.top}px)`},{transform:'translateY(0)'}],{duration:550,easing:ease});
+        if(old)article.animate([{transform:`translate(${old.left-next.left}px,${old.top-next.top}px)`},{transform:'translate(0,0)'}],{duration:550,easing:ease});
         else reveal(article,index*55,20);
       });
       if(!count)reveal(empty);
       status.textContent=count+' '+(count===1?'article':'articles')+(category==='All'?'':' in '+category);
     }));
   }
-  if(route==='/contact'){
+  if(route==='/contact'&&!main.classList.contains('contact-page')){
     const form=main.querySelector('form');
     const chosen=new URLSearchParams(location.search).get('finance');
     if(chosen){const finance=form.querySelector('[name=financeType]');finance.value=['Chattel Mortgage','Finance Lease'].includes(chosen)?'Business Finance':chosen==='Unsecured Personal Loan'?'Personal Loans':chosen==='Secured Car Loan'?'New & Used Vehicle Loans':'';const message=form.querySelector('textarea');if(message)message.value='I would like to enquire about '+chosen+'.';}

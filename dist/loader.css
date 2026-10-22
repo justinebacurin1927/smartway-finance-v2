@@ -6,8 +6,8 @@
 .intro-skip span { margin-left: 10px; color: #00b7f4; }
 .intro-skip:focus-visible { outline: 2px solid #00b7f4; outline-offset: 4px; }
 .intro-active .header .brand { opacity: 0; }
-.intro-active .hero-video { filter: blur(7px); transform: scale(1.035); }
-.intro-revealing .hero-video { filter: blur(0); transform: scale(1); transition: filter 1s cubic-bezier(.22, 1, .36, 1), transform 1s cubic-bezier(.22, 1, .36, 1); }
+.intro-active .hero-art { filter: blur(7px); transform: scale(calc(var(--hero-art-scale, 1) + .035)); }
+.intro-revealing .hero-art { filter: blur(0); transform: scale(var(--hero-art-scale, 1)); transition: filter 1s cubic-bezier(.22, 1, .36, 1), transform 1s cubic-bezier(.22, 1, .36, 1); }
 .intro-active .hero-copy > *, .intro-active .hero-bottom, .intro-active .hero-controls, .intro-active .header nav, .intro-active .header-actions { opacity: 0; }
 .intro-active .hero-copy > * { transform: translateY(18px); }
 .intro-active .hero-copy h1 { --intro-delay: .16s; }

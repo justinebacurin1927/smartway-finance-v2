@@ -1,25 +1,12 @@
-const video = document.querySelector('.hero-video');
-const toggle = document.querySelector('#video-toggle');
+const header = document.querySelector('.hero > .header');
+function updateHeader() {
+  header.classList.toggle('is-scrolled', window.scrollY > 20);
+}
+updateHeader();
+window.addEventListener('scroll', updateHeader, { passive: true });
+window.addEventListener('pageshow', updateHeader);
+
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-function updatePlayback() {
-  toggle.setAttribute('aria-label', video.paused ? 'Play background video' : 'Pause background video');
-  toggle.querySelector('use').setAttribute('href', video.paused ? '#play' : '#pause');
-}
-function loadVideo() {
-  const source = video.querySelector('source');
-  if (!source.getAttribute('src')) {
-    source.src = source.dataset.src;
-    video.load();
-  }
-  return video.play().catch(updatePlayback);
-}
-if (video && toggle) {
-  video.addEventListener('play', updatePlayback);
-  video.addEventListener('pause', updatePlayback);
-  toggle.addEventListener('click', () => video.paused ? loadVideo() : video.pause());
-  reducedMotion.addEventListener('change', () => { if (reducedMotion.matches) video.pause(); });
-  if (!reducedMotion.matches && !navigator.connection?.saveData) loadVideo();
-}
 const menuButton = document.querySelector('.mobile-toggle');
 const mobileMenu = document.querySelector('#mobile-nav');
 function closeMenu() {
@@ -36,11 +23,9 @@ mobileMenu.addEventListener('click', event => { if (event.target.closest('a')) c
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape') {
     if (!mobileMenu.hidden) { closeMenu(); menuButton.focus(); }
-    document.querySelector('.finance-menu').open = false;
   }
 });
 document.addEventListener('click', event => {
-  if (!event.target.closest('.finance-menu')) document.querySelector('.finance-menu').open = false;
   if (!event.target.closest('.header')) closeMenu();
 });
 const lenders = document.querySelector('.lenders');

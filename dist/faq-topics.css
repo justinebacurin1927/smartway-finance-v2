@@ -1,0 +1,47 @@
+/* RM Internet's expanded topic card and broad answer panel, in Smartway colours. */
+#faqs.faq-topics{padding:95px 0 90px;background:#fff}
+#faqs .faq-topic-intro{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,.75fr);align-items:end;gap:80px;max-width:none;text-align:left;margin:0 0 52px}
+#faqs .faq-topic-intro h2{max-width:780px;margin:0;font-size:clamp(42px,4.7vw,70px);font-weight:700;line-height:1.12;letter-spacing:-.045em;color:#0b2635}
+#faqs .faq-topic-intro h2>span{color:inherit}
+#faqs .faq-topic-intro>.faq-topic-aside{max-width:400px;margin:0 0 6px;font-size:15px;line-height:1.8;color:#59717b}
+#faqs .faq-topic-aside p{margin:0}
+.faq-intro-icon,.faq-support-icon{display:grid;place-items:center;flex:none;background:#e7efea;fill:none;stroke:none;pointer-events:none}
+.faq-intro-icon{width:64px;height:64px;margin-bottom:18px;border-radius:16px}
+.faq-intro-icon svg{display:block;width:48px;height:48px}
+.faq-support-icon{width:56px;height:56px;border-radius:14px}
+.faq-support-icon svg{display:block;width:42px;height:42px}
+#faqs.has-faq-topics .faq-topic-layout{display:grid;grid-template-columns:minmax(0,.65fr) minmax(0,1.1fr);gap:20px;align-items:stretch}
+.faq-topic-list{display:flex;flex-direction:column;gap:12px;min-width:0}
+.faq-topic-tab{display:flex;flex-direction:column;justify-content:center;width:100%;min-height:68px;padding:14px 28px;border:1px solid #91b9b1;border-radius:40px;background:transparent;color:#0b2635;text-align:left;font:inherit;cursor:pointer;transition:background-color .2s,border-color .2s}
+.faq-topic-tab:hover{background:#edf5f1;border-color:#416e69}
+.faq-topic-title{display:block;font-size:clamp(22px,1.8vw,25px);font-weight:700;line-height:1.15;letter-spacing:-.035em}
+.faq-topic-symbol,.faq-topic-summary{display:none}
+.faq-topic-tab.is-selected{justify-content:space-between;min-height:250px;padding:28px;border-color:transparent;border-radius:32px;background:#e7efea}
+.faq-topic-tab.is-selected:hover{background:#e7efea;border-color:#a6c8be}
+.faq-topic-tab.is-selected .faq-topic-title{font-size:clamp(30px,2.9vw,42px)}
+.faq-topic-tab.is-selected .faq-topic-symbol{display:grid;place-items:center;width:56px;height:56px;border-radius:12px;background:#cce7dd}
+.faq-topic-symbol svg{display:block;width:43px;height:43px;fill:none;stroke:none}
+.faq-topic-tab.is-selected .faq-topic-summary{display:block;max-width:330px;margin-top:10px;font-size:13px;line-height:1.6}
+.faq-topic-tab:focus-visible{outline:3px solid #08799b;outline-offset:4px}
+#faqs.has-faq-topics .faq-topic-panels{width:100%;min-width:0;max-width:none;margin:0}
+#faqs.has-faq-topics .faq-topic-panel{height:100%;margin:0;padding:0;border:0}
+#faqs.has-faq-topics .faq-answer-inner{display:flex;flex-direction:column;justify-content:space-between;min-height:490px;height:100%;padding:42px;border-radius:32px;background:#0b2635;color:#fff}
+.faq-answer-category{display:block;margin-bottom:25px;font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#b7e6dd}
+#faqs .faq-answer-copy h3{max-width:660px;margin:0 0 22px;font-size:clamp(28px,2.6vw,38px);font-weight:600;line-height:1.2;letter-spacing:-.035em;color:#fff}
+#faqs .faq-answer-copy p{max-width:660px;margin:20px 0 0;font-size:14px;line-height:1.85;color:#456675}
+#faqs.has-faq-topics .faq-answer-copy p{margin:0;font-size:clamp(20px,1.65vw,25px);line-height:1.55;color:#eff7f5}
+#faqs.has-faq-topics .faq-topic-panel:not([hidden]) .faq-answer-copy{animation:smartway-faq-arrive .3s ease both}
+.faq-answer-footer{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-top:56px}
+.faq-answer-footer>span{max-width:220px;font-size:12px;line-height:1.6;color:#c9e0dd}
+#faqs .faq-action{display:inline-flex;align-items:center;flex:none;gap:0;max-width:100%;min-height:56px;margin:0;padding:16px 68px 16px 26px;border:1px solid #153c4a1f;background:var(--finance-action-bg);color:var(--finance-action-ink);box-shadow:0 6px 18px -10px #153c4a40;font-size:14px;font-weight:700;line-height:1.4;text-decoration:none;white-space:nowrap}
+#faqs .faq-action>.finance-action-label{font-size:14px;line-height:1.4}
+#faqs .faq-action>.finance-action-track{inset:7px}
+#faqs .faq-action:focus-visible{outline:2px solid #2c786d;outline-offset:4px}
+#faqs .faq-answer-footer .faq-action:focus-visible{outline-color:#75c8be}
+#faqs.faq-topics .brex-faq-help{max-width:none;margin-top:34px;gap:14px;flex-wrap:wrap}
+#faqs .faq-help-intro{display:flex;align-items:center;gap:16px;min-width:0;margin-right:auto}
+@keyframes smartway-faq-arrive{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1100px){#faqs .faq-topic-intro{gap:40px}#faqs.has-faq-topics .faq-answer-inner{padding:32px}.faq-answer-footer{align-items:flex-start;flex-direction:column;gap:16px}}
+@media(max-width:800px){#faqs.faq-topics{padding:75px 0}#faqs .faq-topic-intro{grid-template-columns:1fr;gap:24px;margin-bottom:40px}#faqs .faq-topic-intro>.faq-topic-aside{max-width:550px}#faqs.has-faq-topics .faq-topic-layout{grid-template-columns:1fr;gap:20px}.faq-topic-tab.is-selected{min-height:210px}#faqs.has-faq-topics .faq-answer-inner{min-height:420px;padding:30px}.faq-answer-footer{flex-direction:row;align-items:flex-end}#faqs .faq-help-intro{flex-basis:100%;margin-bottom:4px}}
+@media(max-width:520px){#faqs .faq-topic-intro h2{font-size:clamp(36px,9vw,45px)}.faq-topic-tab{min-height:64px;padding:14px 24px}.faq-topic-tab.is-selected{min-height:210px;padding:24px}.faq-topic-title{font-size:23px}#faqs.has-faq-topics .faq-answer-inner{min-height:420px;padding:26px}#faqs .faq-answer-copy h3{font-size:28px}#faqs.has-faq-topics .faq-answer-copy p{font-size:19px}.faq-answer-footer{align-items:flex-start;flex-direction:column;gap:16px;margin-top:40px}}
+@media(prefers-reduced-motion:reduce){#faqs.has-faq-topics .faq-topic-panel:not([hidden]) .faq-answer-copy{animation:none}.faq-topic-tab,.faq-answer-footer a{transition:none}}

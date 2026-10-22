@@ -1,0 +1,51 @@
+/* Comparison-page refinements in the shared Smartway palette. */
+.inner-page[data-page="/compare"] .comparison-heading-layout { display:grid; grid-template-columns:minmax(0,1fr) 240px; align-items:center; gap:64px; }
+.comparison-heading-copy { min-width:0; }
+#compare-title em { color:#167366; }
+.inner-page[data-page="/compare"] .comparison-intro { max-width:750px; margin-top:24px; color:#40576a; font-size:1.0625rem; line-height:1.8; }
+.comparison-heading-art { position:relative; width:240px; height:220px; justify-self:end; pointer-events:none; }
+.comparison-symbol { position:absolute; display:grid; place-items:center; border-radius:50%; background:#e3f1ed; }
+.comparison-symbol svg { display:block; fill:none; stroke:none; }
+.comparison-symbol-main { left:0; top:0; width:180px; height:180px; transform:rotate(-6deg); }
+.comparison-symbol-main svg { width:130px; height:130px; }
+.comparison-symbol-small { right:0; bottom:0; width:100px; height:100px; background:#cce7dd; transform:rotate(7deg); }
+.comparison-symbol-small svg { width:70px; height:70px; }
+.inner-page[data-page="/compare"] .comparison-actions { display:flex; justify-content:center; flex-wrap:wrap; gap:14px; margin-top:28px; }
+.inner-page[data-page="/compare"] .source-page>.navy-section .compare-action { position:relative; isolation:isolate; overflow:hidden; display:inline-flex; align-items:center; justify-content:center; flex:none; gap:0; max-width:100%; min-height:56px; margin:0; padding:16px 68px 16px 26px; border:1px solid #ffffff30; border-radius:40px; background:#fff; color:#12334c; font-size:14px; font-weight:700; line-height:1.4; text-decoration:none; transform:none; box-shadow:none; }
+.compare-action::before { content:""; position:absolute; z-index:-1; inset:0; border-radius:inherit; background:#75c8be; clip-path:inset(0 100% 0 0); pointer-events:none; }
+.compare-action>.compare-action-label { display:block; font-size:14px; font-weight:700; line-height:1.4; white-space:nowrap; }
+.compare-action>.compare-action-track { position:absolute; z-index:1; inset:7px; display:flex; align-items:center; justify-content:flex-end; pointer-events:none; }
+.compare-action-arrow { display:grid; place-items:center; flex:0 0 40px; width:40px; height:40px; border-radius:50%; background:#133b50; color:#fff; }
+.compare-action-arrow svg { width:20px; height:20px; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.inner-page[data-page="/compare"] .compare-action:focus-visible { outline:3px solid #75c8be; outline-offset:5px; }
+.compare-action:focus-visible::before { clip-path:inset(0); animation:compare-color-sweep .7s cubic-bezier(.22,1,.36,1) both; }
+.compare-action:focus-visible .compare-action-track { animation:compare-arrow-sweep .7s cubic-bezier(.22,1,.36,1) both; }
+.compare-action:focus-visible .compare-action-label { animation:compare-label-reveal .7s cubic-bezier(.22,1,.36,1) both; }
+@media(hover:hover) and (pointer:fine) {
+  .compare-action:hover::before { clip-path:inset(0); animation:compare-color-sweep .7s cubic-bezier(.22,1,.36,1) both; }
+  .compare-action:hover .compare-action-track { animation:compare-arrow-sweep .7s cubic-bezier(.22,1,.36,1) both; }
+  .compare-action:hover .compare-action-label { animation:compare-label-reveal .7s cubic-bezier(.22,1,.36,1) both; }
+}
+@keyframes compare-color-sweep { from{clip-path:inset(0 calc(100% - 48px) 0 0)} to{clip-path:inset(0)} }
+@keyframes compare-arrow-sweep { from{transform:translateX(calc(-100% + 40px))} to{transform:translateX(0)} }
+@keyframes compare-label-reveal { from{clip-path:inset(0 100% 0 0)} to{clip-path:inset(0)} }
+@media(max-width:1100px) {
+  .inner-page[data-page="/compare"] .comparison-heading-layout { grid-template-columns:minmax(0,1fr) 180px; gap:32px; }
+  .comparison-heading-art { width:180px; height:180px; }
+  .comparison-symbol-main { width:140px; height:140px; }
+  .comparison-symbol-main svg { width:100px; height:100px; }
+  .comparison-symbol-small { width:76px; height:76px; }
+  .comparison-symbol-small svg { width:54px; height:54px; }
+}
+@media(max-width:700px) {
+  .inner-page[data-page="/compare"] .comparison-heading-layout { grid-template-columns:minmax(0,1fr); gap:24px; }
+  .comparison-heading-art { grid-row:1; justify-self:start; width:124px; height:92px; }
+  .comparison-symbol-main { width:84px; height:84px; }
+  .comparison-symbol-main svg { width:62px; height:62px; }
+  .comparison-symbol-small { width:52px; height:52px; }
+  .comparison-symbol-small svg { width:38px; height:38px; }
+  .inner-page[data-page="/compare"] .comparison-intro { font-size:1rem; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .compare-action::before, .compare-action .compare-action-track, .compare-action .compare-action-label { animation:none!important; }
+}

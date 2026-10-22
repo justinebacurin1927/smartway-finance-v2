@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 800" fill="none">
+  <title>Mint contour and finance doodle backdrop</title>
+  <defs>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.25" fill="#639e94" opacity=".32"/>
+    </pattern>
+    <clipPath id="field">
+      <path d="M17 276C-20 120 137 29 330 48c159 15 161 79 322 57 165-22 284 81 257 250-22 139-113 145-141 264-32 136-158 176-323 142C276 726 80 789 45 638 16 516 48 411 17 276Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- An irregular printed field; the page's paper colour shows through. -->
+  <path d="M17 276C-20 120 137 29 330 48c159 15 161 79 322 57 165-22 284 81 257 250-22 139-113 145-141 264-32 136-158 176-323 142C276 726 80 789 45 638 16 516 48 411 17 276Z" fill="#dce9df" opacity=".72"/>
+  <path d="M635 133c121-45 273 4 277 128 3 106-80 148-140 216-65 73-69 142-157 188-84 44-180 29-206-43-29-81 40-128 81-220 40-91 44-231 145-269Z" fill="#c4e2d8" opacity=".42"/>
+  <g clip-path="url(#field)">
+    <path d="M-15 442C98 172 251 59 484 70c212 9 325 138 446 86v475c-113 58-231 92-416 117C291 779 108 659-15 442Z" fill="url(#dots)"/>
+    <g stroke="#72b8aa" stroke-width="1.5" opacity=".4">
+      <path d="M-59 378C12 175 133 66 316 38c209-32 330 131 469 100 87-20 138-66 182-47"/>
+      <path d="M-53 405C23 196 146 89 323 65c204-28 325 131 468 99 87-20 137-63 180-44"/>
+      <path d="M-47 432C34 217 159 112 330 92c199-24 320 131 467 98 87-20 136-60 178-41"/>
+      <path d="M75 835c68-137 134-239 297-239 151 0 207 140 370 111 102-18 151-99 213-136"/>
+      <path d="M102 852c68-137 139-228 274-228 151 0 212 137 373 110 102-17 150-96 212-133"/>
+      <path d="M129 869c68-137 144-217 251-217 151 0 217 134 376 109 102-16 149-93 211-130"/>
+    </g>
+    <path d="m47 479 80-19m-70 37 56-13m602-267 116-28m-107 46 76-18" stroke="#75c8be" stroke-width="5" stroke-linecap="round" opacity=".28"/>
+  </g>
+
+  <!-- Quiet accents share the mint fill and rounded plum line of the icon set. -->
+  <g transform="translate(58 133) rotate(-12)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="m18 0 5 14 15 6-15 5-5 15-5-15-13-5 13-6Z" fill="#75c8be" opacity=".48"/>
+    <path d="m18 4 4 12 12 4-12 4-4 12-4-12-10-4 10-4Z" stroke="#39063e" stroke-width="2.5" opacity=".38"/>
+  </g>
+  <g transform="translate(815 342) rotate(11 36 40)" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M35 10c35-4 43 48 9 57C7 76-3 21 35 10Z" fill="#75c8be" opacity=".35"/>
+    <g stroke="#39063e" stroke-width="3" opacity=".32">
+      <path d="M48 11C18 0-1 29 11 52m10 15c29 14 53-9 46-35"/>
+      <path d="M47 29c-20-7-26 13-7 15s15 19-7 12m6-32-2 36"/>
+    </g>
+  </g>
+  <g transform="translate(247 727) rotate(-18)" stroke-linecap="round" stroke-linejoin="round" opacity=".48">
+    <path d="M3 21c-6-21 28-28 34-9 4 11-3 20-13 22Z" fill="#75c8be"/>
+    <g stroke="#39063e" stroke-width="3" opacity=".65">
+      <path d="M6 26C-7 10 16-5 29 5c9 8 8 22-1 27m-1-2 28 25 8-7m-18-4 7-8"/>
+      <circle cx="17" cy="16" r="4"/>
+    </g>
+  </g>
+  <g stroke="#39063e" stroke-width="2.5" stroke-linecap="round" opacity=".3">
+    <path d="m669 42 2 18m-10-8 18-2M850 526l13 12m-13 0 13-12"/>
+  </g>
+  <g fill="#75c8be" opacity=".55">
+    <circle cx="889" cy="468" r="4"/>
+    <circle cx="113" cy="667" r="3"/>
+    <circle cx="631" cy="775" r="4"/>
+  </g>
+</svg>

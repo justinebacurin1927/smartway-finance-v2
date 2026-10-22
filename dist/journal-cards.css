@@ -1,0 +1,31 @@
+/* Jaycee's reference: two square-edged, oppositely tilted sheets per story. */
+#journal.journal-stacked{overflow:clip;padding-bottom:85px}
+#journal .brex-articles{gap:36px}
+#journal .journal-story{display:flex;flex-direction:column;min-width:0;height:auto;gap:0;padding:0;border:0}
+.journal-deck{--journal-direction:1;position:relative;isolation:isolate;display:grid;grid-template-columns:minmax(0,1fr);flex:1;padding:42px 17% 82px 6%}
+#journal .journal-story:nth-child(odd) .journal-deck{--journal-direction:-1;padding-left:17%;padding-right:6%}
+.journal-panel{grid-area:1 / 1;position:relative;min-width:0;border:0;border-radius:0;box-shadow:0 8px 16px #0b263510;transform-origin:50% 50%}
+#journal .journal-copy{z-index:2;display:flex;flex-direction:column;min-height:480px;padding:26px 24px;background:#75c8be;color:#0b2635;transform:rotate(calc(-9deg * var(--journal-direction)))}
+#journal .journal-photo{z-index:1;margin:0;overflow:hidden;background:#e3f1ed;transform:translate(calc(17% * var(--journal-direction)),10%) rotate(calc(12deg * var(--journal-direction)));padding:0}
+#journal .journal-photo img{position:absolute;inset:0 0 auto;display:block;width:100%;height:calc(100% * 2 / 3);aspect-ratio:auto;object-fit:cover;border-radius:0;transform:none}
+.journal-photo figcaption{position:absolute;inset:calc(100% * 2 / 3) 0 0;display:flex;flex-direction:column;justify-content:space-between;gap:8px;padding:16px;color:#123b49}
+#journal .journal-photo-heading{margin:0;font-size:18px;line-height:1.25;font-weight:700;letter-spacing:-.3px}
+#journal .journal-photo .brex-article-meta{margin:auto 0 0;padding:0;font-size:14px;line-height:1.4;font-weight:400;letter-spacing:0;color:#31575b}
+#journal .journal-copy .brex-article-category{margin:0 0 16px;color:#1f505a;font-size:12px;letter-spacing:.06em}
+#journal .journal-copy h3{margin:0 0 18px;font-size:clamp(19px,1.6vw,24px);line-height:1.2;letter-spacing:-.6px;font-weight:800}
+#journal .journal-copy .brex-article-description{margin:0 0 20px;font-size:14px;line-height:1.65;color:#153b4c}
+#journal .journal-copy .brex-article-meta{margin:auto 0 14px;padding-top:12px;color:#305661;font-size:14px;line-height:1.4}
+#journal .journal-action{display:inline-flex;align-items:center;align-self:flex-start;flex:none;max-width:100%;min-height:52px;margin:0;padding:10px 62px 10px 20px;border:1px solid #153c4a1a;background:var(--finance-action-bg);color:var(--finance-action-ink);box-shadow:0 5px 14px -8px #153c4a40;font-size:14px;line-height:1.4;letter-spacing:0;text-decoration:none}
+#journal .journal-action>.finance-action-label{font-size:14px;line-height:1.4}
+#journal .journal-action>.finance-action-track{inset:5px 6px}
+#journal .journal-action:focus-visible{outline:2px solid #2c786d;outline-offset:4px}
+#journal .journal-story[data-front="image"] .journal-copy{z-index:1;transform:translate(calc(17% * var(--journal-direction)),10%) rotate(calc(12deg * var(--journal-direction)))}
+#journal .journal-story[data-front="image"] .journal-photo{z-index:2;transform:rotate(calc(-9deg * var(--journal-direction)))}
+.journal-story.is-interactive .journal-deck{cursor:pointer}
+.journal-photo .journal-swap{position:absolute;inset:0 0 auto;z-index:1;display:block;width:100%;height:calc(100% * 2 / 3);padding:0;border:0;border-radius:0;background:transparent;cursor:pointer}
+.journal-photo .journal-swap:focus-visible{outline:3px solid #75c8be;outline-offset:-6px}
+#journal .journal-story:not(.is-interactive) .journal-photo:focus-within{z-index:3}
+@media(min-width:1600px){#journal .brex-articles{gap:50px}.journal-deck{padding-top:50px;padding-bottom:94px}#journal .journal-copy{min-height:500px;padding:30px}}
+@media(min-width:761px) and (max-width:1100px){#journal .brex-articles{grid-template-columns:repeat(2,minmax(0,1fr));gap:52px 40px}#journal .journal-story:last-child{grid-column:1 / -1;max-width:440px;width:100%;justify-self:center}#journal .journal-copy h3{font-size:22px}}
+@media(max-width:760px){#journal .brex-articles{grid-template-columns:1fr;gap:48px}.journal-story{max-width:470px;width:100%;justify-self:center}.journal-deck{padding:34px 12% 68px 6%}#journal .journal-story:nth-child(odd) .journal-deck{padding-left:12%;padding-right:6%}#journal .journal-copy{min-height:480px;padding:24px;transform:rotate(calc(-6deg * var(--journal-direction)))}#journal .journal-photo{transform:translate(calc(9% * var(--journal-direction)),7%) rotate(calc(7deg * var(--journal-direction)))}#journal .journal-story[data-front="image"] .journal-copy{transform:translate(calc(9% * var(--journal-direction)),7%) rotate(calc(7deg * var(--journal-direction)))}#journal .journal-story[data-front="image"] .journal-photo{transform:rotate(calc(-6deg * var(--journal-direction)))}#journal .journal-copy h3{font-size:24px}#journal .journal-copy .brex-article-description{font-size:14px}}
+@media(max-width:380px){#journal .journal-copy{padding:22px 20px}#journal .journal-copy h3{font-size:21px}#journal .journal-copy .brex-article-description{font-size:13px}}

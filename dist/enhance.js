@@ -4,12 +4,17 @@
     const tabs=[...finance.querySelectorAll('[data-finance-choice]')];
     const scenes=[...finance.querySelectorAll('[data-finance-scene]')];
     let selected=0;
-    function select(index,focus=false){
+    function select(index,focus=false,source='control'){
       selected=index;
       tabs.forEach((tab,i)=>{tab.classList.toggle('is-active',i===index);tab.setAttribute('aria-selected',String(i===index));tab.tabIndex=i===index?0:-1;});
       scenes.forEach((scene,i)=>{scene.classList.toggle('is-active',i===index);scene.hidden=i!==index;});
       if(focus)tabs[index].focus();
+      finance.dispatchEvent(new CustomEvent('finance:select',{detail:{index,source}}));
     }
+    finance.addEventListener('finance:request',event=>{
+      const {index,source='control'}=event.detail||{};
+      if(Number.isInteger(index)&&index>=0&&index<tabs.length)select(index,false,source);
+    });
     tabs.forEach((tab,i)=>{
       tab.addEventListener('click',()=>select(i));
       tab.addEventListener('keydown',e=>{

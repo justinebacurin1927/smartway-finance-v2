@@ -1,0 +1,98 @@
+/* Shared Cloud PG v2 action, extracted from the approved homepage component. */
+/* Cloud PG v2: the circle sweeps across as the label reveals from left to right. */
+.button.finance-hero-action {
+  --finance-action-bg: #fff;
+  --finance-action-ink: #12334c;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  min-height: 56px;
+  border-radius: 40px;
+  background: var(--finance-action-bg);
+  color: var(--finance-action-ink);
+  box-shadow: none;
+  font-size: 14px;
+  font-weight: 700;
+  gap: 0;
+  padding: 16px 68px 16px 26px;
+}
+.button.finance-hero-action:hover { background: var(--finance-action-bg); }
+.button.finance-hero-action--navy { --finance-action-bg: #0b2635; --finance-action-ink: #fff; }
+.finance-hero-action::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  background: #75c8be;
+  clip-path: inset(0 100% 0 0);
+  pointer-events: none;
+}
+.finance-hero-action > .finance-action-label {
+  display: block;
+  width: auto;
+  height: auto;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 700;
+  white-space: nowrap;
+}
+.finance-hero-action > .finance-action-track {
+  position: absolute;
+  z-index: 1;
+  inset: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: auto;
+  height: auto;
+  pointer-events: none;
+}
+.finance-action-arrow {
+  display: grid;
+  place-items: center;
+  flex: 0 0 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #133b50;
+  color: #fff;
+}
+.finance-action-arrow svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.finance-hero-action--navy .finance-action-arrow { background: #fff; color: #133b50; }
+.finance-hero-action:focus-visible { color: #12334c; }
+.finance-hero-action:focus-visible::before { clip-path: inset(0); animation: finance-color-sweep .7s cubic-bezier(.22, 1, .36, 1) both; }
+.finance-hero-action:focus-visible .finance-action-arrow { background: #133b50; color: #fff; }
+.finance-hero-action:focus-visible .finance-action-track { animation: finance-arrow-sweep .7s cubic-bezier(.22, 1, .36, 1) both; }
+.finance-hero-action:focus-visible .finance-action-label { animation: finance-label-reveal .7s cubic-bezier(.22, 1, .36, 1) both; }
+@media (hover: hover) and (pointer: fine) {
+  .finance-hero-action:hover { color: #12334c; }
+  .finance-hero-action:hover::before { clip-path: inset(0); animation: finance-color-sweep .7s cubic-bezier(.22, 1, .36, 1) both; }
+  .finance-hero-action:hover .finance-action-arrow { background: #133b50; color: #fff; }
+  .finance-hero-action:hover .finance-action-track { animation: finance-arrow-sweep .7s cubic-bezier(.22, 1, .36, 1) both; }
+  .finance-hero-action:hover .finance-action-label { animation: finance-label-reveal .7s cubic-bezier(.22, 1, .36, 1) both; }
+}
+@keyframes finance-color-sweep {
+  from { clip-path: inset(0 calc(100% - 48px) 0 0); }
+  to { clip-path: inset(0); }
+}
+@keyframes finance-arrow-sweep {
+  from { transform: translateX(calc(-100% + 40px)); }
+  to { transform: translateX(0); }
+}
+@keyframes finance-label-reveal {
+  from { clip-path: inset(0 100% 0 0); }
+  to { clip-path: inset(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .finance-hero-action::before,
+  .finance-hero-action .finance-action-track,
+  .finance-hero-action .finance-action-label { animation: none !important; }
+}

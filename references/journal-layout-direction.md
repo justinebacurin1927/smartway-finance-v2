@@ -1,5 +1,7 @@
 # Homepage Finance Hub layout
 
+**Current direction, 21 October 2026:** Jaycee requested three overlapping text/image card pairs with switchable front/back positions; the latest correction uses Smartway mint/navy and removes the external controls and bottom link, using a supplied screenshot. See `journal-paired-cards/direction.md`. This supersedes the earlier Vero and Brex article layouts below. The following text is historical reference context.
+
 Primary: [Vero — Luxury Real Estate Insights CMS](https://dribbble.com/shots/27489413-Luxury-Real-Estate-Insights-CMS-Editorial-Blog-Experience).
 
 The user rejected the cramped lead-story/sidebar composition and requested reference-led layout changes while retaining the video. Nine individual references and visual previews were reviewed; decisions are in journal-layout-sources.json.

@@ -1,5 +1,6 @@
 const fs=require('fs'),path=require('path');
 const root=path.resolve(__dirname,'..'),dist=path.join(root,'dist');
+const faviconLinks=require('./refine-favicon.cjs').links;
 const {pages}=JSON.parse(fs.readFileSync(path.join(root,'references/source-site/content.json')));
 const faqs=JSON.parse(fs.readFileSync(path.join(root,'references/source-site/faqs-expanded.json')));
 const esc=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('"','&quot;');
@@ -71,19 +72,38 @@ const routes=new Set(Object.keys(pages));
 function localize(s){return s.replaceAll('src="assets/','src="/assets/').replace(/https:\/\/(?:www\.)?swfin\.com\.au(?=[/"#])/g,'').replace(/href="(\/[^"?#]*?)(?:\/)?"/g,(m,r)=>routes.has(r)?`href="${r==='/'?'/':r+'/'}"`:m);}
 home=home.replace('We’re here to help — call us or get a free online quote today.',"We're here to help — call us or get a free online quote today.");
 home=localize(home);
-if(!home.includes('dropdown-credit'))home=home.replace('<div class="dropdown">','<div class="dropdown"><a id="dropdown-credit" href="/finance-options/credit-sense/">Credit Sense</a><a href="/finance-options/">View all options</a>');
 // Product chips point directly to the complete product pages, including keyboard navigation.
 const productRoutes={vehicle:'vehicle-loans',business:'business-finance',personal:'personal-loans',leisure:'leisure-finance'};
 for(const [id,route]of Object.entries(productRoutes))home=home.replaceAll(`href="#${id}"`,`href="/finance-options/${route}/"`);
 home=home.replaceAll('href="#" aria-label="Smartway Finance home"','href="/" aria-label="Smartway Finance home"');
 fs.writeFileSync(path.join(dist,'index.html'),home);
-const header=home.match(/<header[\s\S]*?<\/header>/)[0].replaceAll('src="assets/','src="/assets/').replaceAll('href="#about"','href="/about/"').replaceAll('href="#testimonials"','href="/testimonials/"').replaceAll('href="#faqs"','href="/faqs/"').replaceAll('href="#contact"','href="/contact/"').replaceAll('href="#finance"','href="/finance-options/"');
+const header=home.match(/<header[\s\S]*?<\/header>/)[0].replaceAll('src="assets/','src="/assets/').replaceAll('href="#about"','href="/#about"').replaceAll('href="#testimonials"','href="/testimonials/"').replaceAll('href="#faqs"','href="/faqs/"').replaceAll('href="#contact"','href="/#contact"').replaceAll('href="#finance"','href="/#finance"');
 for(const [route,page]of Object.entries(pages)){
  if(route==='/')continue;
  const target=path.join(dist,route);fs.mkdirSync(target,{recursive:true});
  let main=render(page.main).replace('<main','<main id="main" class="source-page"');
  if(route==='/faqs')main=main.replace(/<p>(Who is Smartway Finance\?)<\/p>/g,'');
- const doc=`<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${esc(page.title)} | Smartway Finance</title><meta name="description" content="${esc(page.description)}"><meta name="theme-color" content="#0b2635"><link rel="icon" href="/assets/smartway-logo.png"><link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/complete.css"><script src="/complete.js" defer></script></head><body class="inner-page" data-page="${route}"><a class="skip" href="#main">Skip to content</a>${header}${main}${footer}</body></html>`;
+ const doc=`<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${esc(page.title)} | Smartway Finance</title><meta name="description" content="${esc(page.description)}"><meta name="theme-color" content="#0b2635">${faviconLinks}<link rel="stylesheet" href="/styles.css"><link rel="stylesheet" href="/complete.css"><script src="/complete.js?v=20261021-simple-nav" defer></script><link rel="stylesheet" href="/navigation.css?v=20261021-nav-alignment"></head><body class="inner-page" data-page="${route}"><a class="skip" href="#main">Skip to content</a>${header}${main}${footer}</body></html>`;
  fs.writeFileSync(path.join(target,'index.html'),localize(doc));
 }
 console.log(`Generated ${routes.size} pages from the source capture.`);
+require('./refine-footer-showcase.cjs')();
+require('./refine-doodle-icons.cjs')();
+require('./refine-finance-orbit.cjs')();
+require('./refine-favicon.cjs')();
+require('./refine-home-reviews.cjs')();
+require('./refine-journal-cards.cjs')();
+require('./refine-home-faq.cjs')();
+require('./refine-navigation.cjs')();
+require('./refine-compare-page.cjs')();
+require('./refine-calculator-page.cjs')();
+require('./refine-blog-grid.cjs')();
+require('./refine-faq-page.cjs')();
+require('./refine-testimonials-page.cjs')();
+require('./refine-contact-page.cjs')();
+require('./refine-article-pages.cjs')();
+require('./refine-image-guard.cjs')();
+require('./refine-apply-page.cjs')();
+require('./refine-about-page.cjs')();
+require('./refine-loan-pages.cjs')();
+require('./refine-no-breadcrumbs.cjs')();

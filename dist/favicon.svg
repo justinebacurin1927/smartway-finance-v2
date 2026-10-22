@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <title>Smartway Finance</title>
+  <rect width="64" height="64" rx="12" fill="#fff"/>
+  <g transform="translate(6.4 4.1) scale(.216)">
+    <path fill="#00b0ff" d="M113 2q5-4 9 0l19 19q4 4 0 9l-75 73q-4 4 0 9l6 6q4 4 9 0l74-74q5-5 10 0l60 59q5 5 0 10l-57 59q-5 5-10 0l-20-19q-5-5 0-10l32-32q5-5 0-10l-6-6q-4-4-8 0l-74 76q-5 5-11 0l-58-56q-5-5 0-10Z"/>
+    <path fill="#01579b" d="M0 144q0-9 8-5l63 61q7 6 13-1l29-30q6-6 12 0l29 30q6 6 13 0l59-59q8-6 11 3v37q0 5-4 9l-68 67q-5 5-10 0l-30-31q-6-6-12 0l-30 31q-5 5-11 0L4 188q-4-4-4-9Z"/>
+  </g>
+</svg>

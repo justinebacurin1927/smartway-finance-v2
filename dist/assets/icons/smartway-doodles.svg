@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <title>Smartway doodle icons</title>
+  <desc>Original vector illustrations inspired by the supplied mint and plum drawing style. Rounded strokes and deliberately offset colour shapes.</desc>
+  <symbol id="money" viewBox="0 0 96 96">
+    <path fill="#75c8be" d="m13 24 67 3q8 0 8 9l-2 36q-1 8-10 7l-62-4q-8 0-7-9l1-34q0-9 5-8Z"/>
+    <g fill="none" stroke="#39063e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m18 20 59 3q7 0 7 7l-2 36q0 7-7 6l-58-3q-7 0-7-7l1-34q0-8 7-8Z"/>
+      <path d="M25 24q0 10-11 10m55-8q0 10 11 10M15 56q11 0 11 10m41 3q0-10 11-10M22 47h3m44 0h3M54 35q-14-5-16 4-1 6 9 7 12 2 9 9-2 6-16 2M48 29l-1 33"/>
+    </g>
+  </symbol>
+  <symbol id="car" viewBox="0 0 96 96">
+    <path fill="#75c8be" d="M17 43 28 23q3-5 10-5l25 2q6 0 9 7l10 21 2 20q0 8-9 9l-54-1q-9 0-10-9l1-16q0-6 5-8Z"/>
+    <g fill="none" stroke="#39063e" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m23 40 9-17q1-3 6-3l22 1q5 0 7 5l7 15M17 47q29 5 61 0M13 55l1 13q0 4 5 4h7m44 0h9q5 0 5-5V55M34 73l28-1M26 56l6 1m33 0 6-1"/>
+      <path d="M24 73v7m49-7v7M44 27v11"/>
+    </g>
+  </symbol>
+  <symbol id="motorcycle" viewBox="0 0 96 96">
+    <path fill="#75c8be" d="M12 53q9-10 23-1l15-15 17-1 8 17q16-5 18 12 1 17-16 18-14 1-16-13H41q-3 14-17 14Q5 82 6 67q0-8 6-14Z"/>
+    <g fill="none" stroke="#39063e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="23" cy="67" r="14"/><circle cx="76" cy="67" r="14"/>
+      <path d="m24 66 19-25 14 25H25m31 0 13-24-8-17h-9m10 5h10M31 36h17m-4 5h20l12 25"/>
+    </g>
+  </symbol>
+  <symbol id="caravan" viewBox="0 0 96 96">
+    <path fill="#75c8be" d="m14 26 50-1q14 0 17 13l3 34-67 3q-10 0-10-10l1-28q0-10 6-11Z"/>
+    <g fill="none" stroke="#39063e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 67V34q0-12 12-12h37q13 0 16 13l4 33H67m-22 1H16m65-2h9v7M24 36h21v16H24Zm32 1h10l2 29M57 52h1"/>
+      <circle cx="56" cy="71" r="10"/>
+    </g>
+  </symbol>
+  <symbol id="leisure" viewBox="0 0 96 96">
+    <path fill="#75c8be" d="m43 11-27 39q-3 5 4 5l24-1Zm10 7 23 34q3 4-3 4H53ZM11 62l75-3-13 19q-2 4-8 4l-37 1q-7 0-10-7Z"/>
+    <g fill="none" stroke="#39063e" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m45 15-25 35 24-1m9-32 20 30-16 1M49 13l1 50M16 65q31 4 65-2l-9 14M13 85q9-6 18 0t18 0 18 0 17-1"/>
+    </g>
+  </symbol>
+  <symbol id="wallet" viewBox="0 0 96 96">
+    <path fill="#75c8be" d="M14 27q1-10 13-10l43 1q9 0 8 9l-1 11 7 2v33q0 9-10 10l-47-1q-15 0-15-13Z"/>
+    <g fill="none" stroke="#39063e" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m24 25 48 1q7 0 8 7M80 43H65q-13 0-15 11 1 12 14 12h18M63 54h2M18 33l-1 35q0 9 9 9l48 1"/>
+    </g>
+  </symbol>
+  <symbol id="briefcase" viewBox="0 0 96 96">
+    <path fill="#75c8be" d="m16 30 62-2q10 0 11 10l-2 34q0 12-13 13l-48-1q-14 0-14-11l-2-31q0-10 6-12Z"/>
+    <g fill="none" stroke="#39063e" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m29 27 5-11q2-3 6-3h19q4 0 6 4l4 10M14 41l31 14 36-15M39 54v9l14 1 1-10M17 64v10q0 5 6 5m51 0q8 0 8-7V60"/>
+    </g>
+  </symbol>
+  <symbol id="credit" viewBox="0 0 96 96">
+    <path fill="#75c8be" d="M48 13q30-1 33 30 3 32-29 38-32 4-37-27-4-32 33-41Z"/>
+    <g fill="none" stroke="#39063e" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 59q-10-27 11-41 21-14 42 1M80 38q10 33-20 44-22 8-38-8M57 32q-21-8-24 6-1 7 14 9 17 2 13 13-4 9-25 2M48 25l-2 45"/>
+    </g>
+  </symbol>
+  <symbol id="bank" viewBox="0 0 96 96">
+    <path fill="#75c8be" d="M11 29 45 8q4-3 9 0l30 21q5 4 2 13l-74 1q-4-7-1-14ZM15 76h66q6 0 5 9l-73 1q-5-4 2-10Z"/>
+    <g fill="none" stroke="#39063e" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m20 31 28-17 26 17M19 45l57-1M27 48l-1 20m22-20v19m22-20 1 21M19 74h59"/>
+    </g>
+  </symbol>
+  <symbol id="clipboard" viewBox="0 0 96 96">
+    <path fill="#75c8be" d="m23 22 50-1q9 0 9 10l-2 46q-1 9-11 9l-46-1q-9-1-8-11l1-41q-1-11 7-11Z"/>
+    <g fill="none" stroke="#39063e" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M27 22h7q0-8 7-9 1-7 7-7t9 9q8 0 9 9l-32 1M22 27h-8l-1 49q0 8 9 8l48 1q10 0 10-9l1-46h-8M32 42l29-1M32 54h20M55 73l7-8 10-1"/>
+    </g>
+  </symbol>
+  <symbol id="target" viewBox="0 0 96 96">
+    <path fill="#75c8be" d="M42 19q29-6 34 24 7 28-22 34-29 7-34-19-9-31 22-39Z"/>
+    <g fill="none" stroke="#39063e" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M58 14q-28-11-42 14-15 27 7 47 22 19 46-1 14-12 12-31M47 49l28-28M75 21l-1-12 8-5 1 12 9-2-6 10-11-3M27 81l-1 7 9 1 3-6m24-1 3 6 8-3-2-7"/>
+    </g>
+  </symbol>
+  <symbol id="shield" viewBox="0 0 96 96">
+    <path fill="#75c8be" d="M16 21q17-2 29-11 5-3 9 0 13 8 27 10l1 24Q80 72 50 87 15 73 12 48Z"/>
+    <g fill="none" stroke="#39063e" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 24q15-2 26-10 11 8 27 10l-1 22q-2 20-25 33M17 42q-2 20 14 31M33 46l11 12 20-24"/>
+    </g>
+  </symbol>
+  <symbol id="scales" viewBox="0 0 96 96">
+    <path fill="#75c8be" d="M43 11q5-8 10 0l-1 64h-9ZM8 55q14 1 28-1-1 23-14 23T8 55Zm52-1 28 1q-1 22-14 22T60 54Z"/>
+    <g fill="none" stroke="#39063e" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m16 22 66-1M47 21v58M21 26 10 50m13-24 12 23m38-24L62 49m13-24 12 25M31 86q0-7 8-7h19q8 0 8 8"/>
+    </g>
+  </symbol>
+  <symbol id="chat" viewBox="0 0 96 96">
+    <path fill="#75c8be" d="m20 16 56 1q12 0 12 12l-2 30q-1 11-14 11H43L23 85l-1-15q-12-1-12-12l1-30q0-12 9-12Z"/>
+    <g fill="none" stroke="#39063e" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m22 20 47 1q11 0 11 10l-1 25q0 10-11 10H43L27 78l-1-13M15 54l1-20M31 39h1m15 1h1m15-1h1"/>
+    </g>
+  </symbol>
+  <symbol id="review" viewBox="0 0 96 96">
+    <path fill="#75c8be" d="m18 17 56 2q12 0 12 12l-2 29q0 11-13 11H43L22 85l-1-15q-12 0-12-12l1-29q0-12 8-12Z"/>
+    <g fill="none" stroke="#39063e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m21 20 47 1q11 0 11 10l-1 25q0 10-11 10H43L27 78l-1-13M15 54l1-20"/>
+      <path d="m47 29 4 8 9 1-6 6 1 9-8-4-8 4 1-9-6-6 9-1ZM80 9v8m-4-4h8"/>
+    </g>
+  </symbol>
+  <symbol id="handshake" viewBox="0 0 96 96">
+    <path fill="#75c8be" d="m8 25 13 2-5 37-12-3Zm70-1 13-1 3 38-13 1ZM24 35l18-5 13 2 18 3 6 23-23 21-18-9-20-14Z"/>
+    <g fill="none" stroke="#39063e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m23 28-5 32m4-22 17-4M80 28l4 30M76 36l-21-4q-7-1-12 5l-8 10q5 8 14 0l7-6m-2 8 21 18q3 5-3 8l-9-6m3 4q4 7-3 9l-10-8m4 6q-1 7-8 3l-16-12M29 60l-3 3m10 2-5 5m12 1-5 5"/>
+    </g>
+  </symbol>
+  <symbol id="mail" viewBox="0 0 96 96">
+    <path fill="#75c8be" d="m14 24 67 1q9 0 9 10l-2 39q0 8-11 8l-61-2q-9 0-9-10l1-35q0-11 6-11Z"/>
+    <g fill="none" stroke="#39063e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="m16 22 61 1q7 0 7 9l-1 34q0 9-9 9l-57-1q-8 0-8-8l1-31m5-5 31 26 30-25M15 66l20-17m23 2 18 16"/></g>
+  </symbol>
+  <symbol id="location" viewBox="0 0 96 96">
+    <path fill="#75c8be" d="M51 7q31 0 32 29 1 23-32 53Q17 58 18 36 18 7 51 7Z"/>
+    <g fill="none" stroke="#39063e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M34 13q20-10 35 4 25 24-21 64Q15 50 15 32q0-9 6-15"/><path d="M49 24q14 0 14 13T49 50 35 37q0-13 14-13ZM23 85q25 10 51-1"/></g>
+  </symbol>
+  <symbol id="clock" viewBox="0 0 96 96">
+    <path fill="#75c8be" d="M49 8q37 0 38 39Q86 87 48 87 8 86 9 48 9 8 49 8Z"/>
+    <g fill="none" stroke="#39063e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M31 13q30-13 46 13 17 30-10 49-26 19-49-6Q1 48 15 25M47 24l-1 24 18 10M47 12v5m-1 55v5M17 46h5m49 0h5"/></g>
+  </symbol>
+  <symbol id="phone" viewBox="0 0 24 24">
+    <path fill="#75c8be" stroke="none" d="m5 2 4 1 2 5-3 3q2 4 5 5l3-2 5 2v5q-7 2-13-4Q1 10 3 4Z"/>
+    <path fill="none" stroke="#39063e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="m5 3 3 1 1 4-2 2q2 5 7 7l2-3 5 2v4q-1 2-4 1C8 19 2 12 3 5"/>
+  </symbol>
+  <symbol id="check" viewBox="0 0 24 24">
+    <path fill="#75c8be" stroke="none" d="M11 2q10-1 11 10 0 10-11 10Q1 22 2 12 1 2 11 2Z"/>
+    <path fill="none" stroke="#39063e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="m6 12 4 5 8-10"/>
+  </symbol>
+</svg>
